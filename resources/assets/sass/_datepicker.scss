@@ -1,0 +1,342 @@
+//This is the datepicker styles
+
+//Custom Select
+#flight-datepicker {
+
+}
+@media screen and (min-width: 400px) {
+  .all-datepicker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.all-datepicker .form-item {
+  position: relative;
+  margin: 12px 0 60px;
+  width: 50%;
+}
+@media screen and (min-width: 400px) {
+  .all-datepicker .form-item {
+    margin: 12px 24px 0 0;
+  }
+}
+.all-datepicker label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+.all-datepicker input {
+  display: block;
+  padding-bottom: 6px;
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $brandColor;
+  border-radius: 0;
+  outline: none;
+  -webkit-transition: border-color .2s ease-out;
+  transition: border-color .2s ease-out;
+}
+.all-datepicker input:first-child, .all-datepicker input:last-child {
+  border-radius: 0;
+}
+.all-datepicker input::-webkit-input-placeholder {
+  color: #c2c2c2;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 200;
+  -webkit-transition: color .2s .2s ease-out;
+  transition: color .2s .2s ease-out;
+}
+.all-datepicker input:-moz-placeholder {
+  color: #c2c2c2;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 200;
+  -webkit-transition: color .2s .2s ease-out;
+  transition: color .2s .2s ease-out;
+}
+.all-datepicker input::-moz-placeholder {
+  color: #c2c2c2;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 200;
+  -webkit-transition: color .2s .2s ease-out;
+  transition: color .2s .2s ease-out;
+}
+.all-datepicker input:-ms-input-placeholder {
+  color: #c2c2c2;
+  font-size: 15px;
+  line-height: 30px;
+  -webkit-transition: color .2s .2s ease-out;
+  font-weight: 200;
+  transition: color .2s .2s ease-out;
+}
+.all-datepicker input:focus {
+  border-bottom-color: $brandColor;
+}
+.all-datepicker input:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+.all-datepicker input:focus:-moz-placeholder {
+  color: transparent;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+.all-datepicker input:focus::-moz-placeholder {
+  color: transparent;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+.all-datepicker input:focus:-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+.all-datepicker .date-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  top: calc(100% + 6px);
+  font-size: 16px;
+  color: #ccc;
+}
+@media screen and (min-width: 400px) {
+  .all-datepicker .date-text {
+    top: 110%;
+  }
+}
+
+.datepicker.dropdown-menu {
+  padding: 0;
+  background-clip: border-box;
+  border: none;
+  border-radius: 0;
+  -webkit-animation: popup .2s ease-out forwards;
+          animation: popup .2s ease-out forwards;
+}
+.datepicker.dropdown-menu table {
+  padding: 5px;
+}
+.datepicker.dropdown-menu table thead {
+  background-color: #fff;
+}
+.datepicker.dropdown-menu table thead tr {
+  border-top: 0;
+}
+.datepicker.dropdown-menu table tbody {
+  background-color: white;
+}
+.datepicker.dropdown-menu table tr {
+  border-top: 1px solid #ededed;
+}
+.datepicker.dropdown-menu table tr td, .datepicker.dropdown-menu table tr th {
+  width: auto;
+  height: 24px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 0;
+  -webkit-transition: background-color .6s ease-out;
+  transition: background-color .6s ease-out;
+}
+@media screen and (min-width: 400px) {
+  .datepicker.dropdown-menu table tr td, .datepicker.dropdown-menu table tr th {
+    padding: 6px;
+  }
+}
+.datepicker.dropdown-menu table tr td:hover, .datepicker.dropdown-menu table tr td.active:hover, .datepicker.dropdown-menu table tr td:active:hover, .datepicker.dropdown-menu table tr th:hover, .datepicker.dropdown-menu table tr th.active:hover, .datepicker.dropdown-menu table tr th:active:hover {
+  border-color: #ededed;
+  border-radius: 0;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+.datepicker.dropdown-menu table tr td.focused, .datepicker.dropdown-menu table tr td.selected, .datepicker.dropdown-menu table tr th.focused, .datepicker.dropdown-menu table tr th.selected {
+
+  border-color: #ededed;
+  border-radius: 0;
+}
+.datepicker.dropdown-menu table tr td.active, .datepicker.dropdown-menu table tr td.active:focus, .datepicker.dropdown-menu table tr td.active.active:hover, .datepicker.dropdown-menu table tr td:active:focus, .datepicker.dropdown-menu table tr td.highlighted, .datepicker.dropdown-menu table tr th.active, .datepicker.dropdown-menu table tr th.active:focus, .datepicker.dropdown-menu table tr th.active.active:hover, .datepicker.dropdown-menu table tr th:active:focus, .datepicker.dropdown-menu table tr th.highlighted {
+  background-color: $brandColor;
+  border-color: #ededed;
+}
+.datepicker.dropdown-menu table tr th.datepicker-switch {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #333;
+  background-color: inherit;
+  border-radius: 0;
+}
+.datepicker.dropdown-menu table tr th.prev,
+.datepicker.dropdown-menu table tr th.next {
+  color: #ffffff;
+  background-color: $brandColor;
+  border-radius: 0;
+}
+.datepicker.dropdown-menu table tr th.dow {
+  padding: 2px 12px;
+  font-size: 12px;
+  line-height: 2;
+  color: #333;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+.datepicker.dropdown-menu table tr td.day {
+  width: 46px;
+
+}
+.datepicker.dropdown-menu table tr td.day:last-child {
+  border-right-width: 0;
+}
+.datepicker.dropdown-menu table tr td.range {
+  background-color: #eeeeee;
+}
+.datepicker.dropdown-menu .new,
+.datepicker.dropdown-menu .old,
+.datepicker.dropdown-menu .disabled,
+.datepicker.dropdown-menu .disabled:hover {
+  color: #ccc;
+}
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+.fontawesome-calendar {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  font-size: 24px;
+  color: #ccc;
+}
+
+@-webkit-keyframes popup {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+
+
+//Custom Select
+.selectholder {
+	width: 24%;
+  float: left;
+  margin-right: 10px;
+	background: #eee;
+	font-size: 1.3em;
+	height: 2.4em;
+	color: #666;
+	-o-transition: .1s ease-out;
+	-ms-transition: .1s ease-out;
+	-moz-transition: .1s ease-out;
+	-webkit-transition: .1s ease-out;
+	transition: .1s ease-out;
+	cursor: pointer;
+}
+
+.selectholder .desc {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: .8em;
+  line-height: 3.4em;
+  font-size: 15px;
+}
+
+.selectholder .pulldown {
+	float: right;
+	vertical-align: middle;
+	width: 2.4em;
+	height: 100%;
+	background-color: #ddd;
+	background-image: url('http://supereightstudio.com/img/pulldown.png');
+	background-size: cover;
+	-o-transition: .1s ease-out;
+	-ms-transition: .1s ease-out;
+	-moz-transition: .1s ease-out;
+	-webkit-transition: .1s ease-out;
+	transition: .1s ease-out;
+}
+
+.selectholder:hover,
+.activeselectholder {
+	background-color: #ddd;
+}
+
+.selectholder:hover .pulldown,
+.activeselectholder .pulldown {
+	background-color: #333;
+	background-image: url('http://supereightstudio.com/img/pulldown_hover.png');
+}
+
+.selectholder .selectdropdown {
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #333;
+	color: #fff;
+	display: none;
+	clear: both;
+}
+
+.selectholder .selectdropdown span {
+	display: block;
+	border-bottom: solid 1px #555;
+	padding-left: .8em;
+	line-height: 2.4em;
+	width: 100%;
+	-o-transition: background-color .1s ease-out;
+	-ms-transition: background-color .1s ease-out;
+	-moz-transition: background-color .1s ease-out;
+	-webkit-transition: background-color .1s ease-out;
+	transition: background-color .1s ease-out;
+}
+
+.selectholder .selectdropdown span:last-child {
+	border-bottom: none;
+}
+
+.selectholder .selectdropdown span.active {
+	background-color: $brandColor;
+	background-image: url('http://supereightstudio.com/img/radio_tick.png');
+	background-repeat: no-repeat;
+	background-size: 1.6em 1.6em;
+	background-position: 98% 50%;
+}
+
+.selectholder .selectdropdown span:hover {
+	background-color: #555;
+}

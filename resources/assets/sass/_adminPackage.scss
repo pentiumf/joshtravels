@@ -1,0 +1,117 @@
+//This is the styles for the admin packages
+.admin-package-wrapper {
+  padding: 30px;
+  .admin-package {
+    position: relative;
+    width: 30%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 300px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.1);
+    overflow: hidden;
+    border-radius: 6px;
+    transition: translate .18s,box-shadow .18s;
+    &:hover {
+      box-shadow: 0 5px 25px rgba(0,0,0,.1);
+      transform: translateY(-1px);
+    }
+    .admin-package-image {
+      width: 100%;
+      height: 70%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .admin-package-cap {
+      padding: 10px;
+      height: 30%;
+      width: 100%;
+      .admin-package-cap-left {
+        h5 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        span {
+          background: $brandColor;
+          padding: 4px 8px;
+          color: #fff;
+          border-radius: 3px 10px;
+          font-size: 14px;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  .admin-package-info-content-control {
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      width: 100px;
+      height: 35px;
+      display: inline-block;
+      background: #737373;
+      color: #fff;
+      border-radius: 3px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
+      }
+    }
+  }
+
+  .admin-package-info-content-left {
+    float: left;
+    width: 60%;
+    margin-right: 5%;
+    .admin-package-info-content {
+      margin-bottom: 15px;
+      h3 {
+        font-size: 30px;
+
+      }
+      h4 {
+        font-size: 23px;
+        color: #000;
+      }
+      h5 {
+        font-size: 18px;
+        padding: 4px 0;
+      }
+    }
+  }
+
+  .admin-package-info-content-right {
+    float: right;
+    width: 30%;
+    height: 300px;
+    .admin-package-info-content-image {
+      border: 1px solid #eee;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+}

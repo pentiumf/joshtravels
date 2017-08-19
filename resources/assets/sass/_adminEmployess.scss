@@ -1,0 +1,79 @@
+//This is the styles for admin index page
+
+.admin-content-header {
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 14px;
+  h2 {
+    font-size: 18px;
+    color: $adminBrandcolor;
+    text-transform: uppercase;
+    i {
+      color: $brandColor;
+    }
+  }
+}
+
+.admin-content-wrapper {
+  position: relative;
+  background-color: #fff;
+
+  table{
+    width:100%;
+    table-layout: fixed;
+  }
+
+  .tbl-header{
+    background-color: $adminBrandcolor;
+   }
+
+  .tbl-content{
+    height:530px;
+    overflow-x:auto;
+  }
+
+  .tbl-header th{
+    padding: 19px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  .tbl-content td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-size: 16px;
+    color: #525252;
+    border-bottom: dotted 1px #c8c8c8;
+  }
+
+
+  .tbl-header span {
+      color: #fff;
+      padding-right: 5px;
+  }
+
+  .homeUpdateBtn {
+      background-color: #4CAF50;
+      padding: 4px 20px;
+      border:1px solid #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+  }
+
+
+  .homeUpdateBtn:hover {
+      opacity: 0.8;
+  }
+
+  .center {
+      text-align: center !important;
+  }
+
+}

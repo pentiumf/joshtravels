@@ -1,0 +1,84 @@
+
+// Fonts
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900);
+//
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+//Clearfix
+.clearfix:after {
+     content: "";
+     display: block;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+body {
+  font-family: 'Titillium Web';
+  color: #636363;
+}
+
+footer {
+  .footer-top {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(http://res.cloudinary.com/hapiglsx2/image/upload/v1502740161/darkmount_fluasb.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    .footer-top-content {
+      color: #a5a5a5;
+      padding: 40px 0;
+      .footer-top-float {
+        float: left;
+        width: 30%;
+        padding: 20px 20px 20px 60px;
+        margin: 1%;
+        h3 {
+          color: #fff;
+          margin-bottom: 10px;
+        }
+        ul {
+          li {
+            list-style: none;
+            margin-bottom: 4px;
+            a{
+              color: #a5a5a5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+
+  }
+}
+
+#content {
+  padding-top: 90px;
+}
+
+// Variables
+@import "variables";
+@import "nav";
+@import "home";
+@import "login";
+@import "datepicker";
+@import "adminIndex";
+@import "adminEmployess";
+@import "adminBooking";
+@import "adminPackage";
+@import "adminForm";

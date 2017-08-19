@@ -1,0 +1,553 @@
+//This is the home styles
+.home-banner-bg {
+  position: relative;
+  height: 600px;
+  background-image: url(http://wp.swlabs.co/exploore/wp-content/uploads/2016/05/home-banner-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #92AAC6;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+
+  .home-banner-cap {
+    padding-top: 200px;
+    text-align: center;
+    color: #fff;
+      h1 {
+        font-weight: 500;
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 200;
+      }
+  }
+
+  .home-tab-pannel {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    ul {
+      margin: 0;
+      .current-flight-tab {
+        background-color: $finderColor;
+        color: #fff;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+        width: 180px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        background-color: #eee;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        color: $brandColor;
+          &:hover {
+            background-color: $finderColor;
+            color: #fff;
+          }
+        img {
+          margin-right: 15px;
+          width: 14px;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+//Finder
+.finder-wrapper {
+  padding: 50px 20px 100px 20px;
+  border-bottom: 1px solid #333;
+  background-color: $finderColor;
+
+  .current-finder {
+    display: block !important;
+  }
+
+  .finder {
+    display: none;
+
+    .find-hotel-destination {
+      width: 15%;
+      float: left;
+      margin-right: 15px;
+      span {
+        margin-bottom: 15px;
+        display: block;
+        font-size: 17px;
+        color: #fff;
+        font-weight: 600;
+      }
+      input {
+        display: block;
+        padding-bottom: 6px;
+        width: 100%;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: left;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #F56961;
+        border-radius: 0;
+        outline: none;
+        -webkit-transition: border-color .2s ease-out;
+        transition: border-color .2s ease-out;
+      }
+    }
+    .find-hotel-group-date {
+      width: 40%;
+      float: left;
+    }
+
+    .ofFlight {
+      width: 26% !important;
+      .selectholder {
+        width: 31%;
+      }
+      .searchholder {
+        width: 30%;
+      }
+    }
+
+    .ofTour {
+      .selectholder {
+        width: 35% !important;
+      }
+      .searchholder {
+        width: 25% !important;
+      }
+    }
+
+
+    .find-hotel-group-select {
+      padding-top: 29px;
+      width: 42%;
+      float: left;
+      margin-right: 15px;
+    }
+
+    .searchholder {
+      width: 20%;
+      float: left;
+      button {
+        width: 100%;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: $brandColor;
+        text-transform: uppercase;
+        box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
+      }
+    }
+
+  }
+}
+
+
+//Customer Add Info
+.customer-addinfo-wrapper {
+  background-color: #FAF9F9;
+  .customer-addinfo-container {
+    padding: 0 50px;
+
+    .customer-addinfo{
+      padding: 15px 8px;
+      float: left;
+      width: 33%;
+
+      .customer-addinfoicon {
+        width: 15%;
+        float: left;
+        margin-right: 10px;
+        i {
+          font-size: 40px;
+          text-align: center;
+          display: block;
+          color: #ccc;
+        }
+      }
+      .customer-addinfocap {
+        width: 75%;
+        float: left;
+        h2 {
+          font-weight: 600;
+          font-size: 15px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+//Top Destinations
+.top-destinations-wrapper {
+  padding: 90px 0;
+
+  .top-destinations-container{
+      margin: 0 80px;
+
+    .top-destination-header {
+      text-align: center;
+      margin-bottom: 30px;
+      h1 {
+        color: $brandColor;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+
+
+  }
+
+}
+
+.top-destination {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 8px;
+  width: 32%;
+  height: 400px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+
+.top-des-add {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding: 20px 40px;
+  h2 {
+    font-weight: 600;
+  }
+  h4 {
+    font-weight: 500;
+  }
+  p {
+    font-weight: 200;
+    font-size: 14px;
+  }
+}
+
+.top-destination * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.top-destination::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-destination:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 100%;
+  content: '';
+  background-color: rgba(51, 51, 51, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.top-destination img {
+  vertical-align: top;
+  // backface-visibility: hidden;
+  height: 100%;
+}
+.top-destination figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-destination h3,
+.top-destination h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+.top-destination h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.top-destination h5 {
+  font-weight: normal;
+  background-color: $brandColor;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.top-destination a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.top-destination:hover:before,
+.top-destination.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.top-destination:hover h3,
+.top-destination.hover h3,
+.top-destination:hover h5,
+.top-destination.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.top-destination:hover h3,
+.top-destination.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.top-destination:hover h5,
+.top-destination.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+
+
+//Special Packages/////
+.special-tourpackages-wrappers {
+  background-color: #e9e9e9;
+  .special-tourpackages-header {
+    text-align: center;
+    padding-top: 50px;
+    h2 {
+      font-size: 30px;
+      color: $brandColor;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  #special-packages {
+    .item {
+        text-align: center;
+        height: 400px;
+        padding: 50px;
+        opacity: .2;
+        -webkit-transform: scale3d(0.8, 0.8, 1);
+        transform: scale3d(0.8, 0.8, 1);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .shadow-effect {
+      position: relative;
+        background: #fff;
+        border-radius: 4px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+    }
+
+    .item a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .owl-item.active.center .item {
+        opacity: 1;
+        -webkit-transform: scale3d(1.0, 1.0, 1);
+        transform: scale3d(1.0, 1.0, 1);
+    }
+    .owl-carousel .owl-item img {
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        width: 100%;
+        height: 80%;
+    }
+
+    .owl-nav {
+      text-align: center;
+      padding-bottom: 20px;
+      div {
+        display: inline-block;
+        color: $brandColor;
+        font-size: 30px;
+      }
+      .owl-prev {
+        margin-right: 30px;
+      }
+    }
+
+    .package-caption-left {
+      float: left;
+      width: 50%;
+      text-align: left;
+      padding: 5px 5px 5px 15px;
+      .package-caption-name {
+        h2 {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .package-caption-rating {
+        ul {
+          li {
+            list-style: none;
+            display: inline-block;
+            i {
+              color: $brandColor;
+            }
+          }
+        }
+      }
+    }
+
+    .package-caption-right {
+      float: right;
+      width: 50%;
+      text-align: right;
+      padding: 5px 15px 5px 5px;
+      .package-caption-save {
+        span {
+          color: #000;
+        }
+      }
+      .package-caption-price {
+        color: $brandColor;
+        font-weight: 700;
+      }
+    }
+
+    .package-day-night {
+      position: absolute;
+      top: 0;
+      padding: 10px;
+      span {
+        background: $brandColor;
+        color: #fff;
+        font-weight: 200;
+        font-size: 13px;
+        padding: 5px 10px;
+        border-radius: 3px;
+      }
+    }
+
+
+    .owl-carousel.owl-theme .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
+        background: #28CB75;
+        -webkit-transform: translate3d(0px, -50%, 0px) scale(0.7);
+                transform: translate3d(0px, -50%, 0px) scale(0.7);
+    }
+    .owl-carousel.owl-theme .owl-dots .owl-dot span {
+        background: #C4C4CC;
+        display: block;
+        height: 20px;
+        margin: 0 2px 5px;
+        -webkit-transform: translate3d(0px, -50%, 0px) scale(0.3);
+                transform: translate3d(0px, -50%, 0px) scale(0.3);
+        -webkit-transform-origin: 50% 50% 0;
+                transform-origin: 50% 50% 0;
+        -webkit-transition: all 250ms ease-out 0s;
+        transition: all 250ms ease-out 0s;
+        width: 20px;
+    }
+
+  }
+
+
+}
+
+//Customer Interests
+.customer-interets-wrapper {
+  position: relative;
+   height: 500px;
+   background-image: url(http://res.cloudinary.com/hapiglsx2/image/upload/v1502647194/mountain-tops-snow-winter-lift-tourism-sky-clouds_fmsy3w.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   text-align: center;
+   background-attachment: fixed;
+   background-color: rgba(0, 0, 0, 0.4);
+   background-blend-mode: multiply;
+
+   .customer-interets {
+     width: 100%;
+     height: 100%;
+     .customer-interets-left {
+       width: 40%;
+       float: left;
+       height: 100%;
+       h2 {
+         font-size: 80px;
+         font-weight: 900;
+         text-transform: uppercase;
+         line-height: 500px;
+         background: rgba(255, 255, 255, 0.85);
+         color: #000;
+         mix-blend-mode: lighten;
+       }
+
+     }
+
+     .customer-interets-right {
+       width: 60%;
+       padding: 130px 30px 30px 30px;
+       float: left;
+       text-align: center;
+       color: #fff;
+       h2 {
+          font-size: 25px;
+          margin-bottom: 30px;
+          text-transform: capitalize;
+       }
+     }
+
+   }
+}

@@ -1,0 +1,207 @@
+
+
+
+#AuthControl {
+  //This is the login styles
+  .signin-header {
+    color: $brandColor;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: left;
+    padding: 13px 0px 20px 25px;
+  }
+
+  // a {
+  //   color: $brandColor;
+  //   text-decoration: none;
+  // }
+
+
+  //login
+  .login {
+    width: 360px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -184px 0px 0px -150px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 9999px rgba(0,0,0,0.6);
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-name: bounceInDown;
+    border-radius: 3px;
+    z-index: 10000;
+    display: none;
+  }
+
+
+  //signup
+  .signup {
+    width: 360px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -184px 0px 0px -150px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 9999px rgba(0,0,0,0.6);
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-name: bounceInDown;
+    border-radius: 3px;
+    z-index: 10000;
+    display: none;
+  }
+
+  .user, .pw{
+    border-left: 5px solid transparent;
+    transition: all 0.3s linear;
+  }
+
+  .user:hover, .pw:hover{
+    background: #F0F0F0;
+      border-left: 5px solid $brandColor;
+
+  }
+
+  .acces-control input[type="text"], input[type="password"], input[type="email"]  {
+    width: 351px;
+    padding: 20px 0px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #222;
+    margin: 0 auto;
+    text-indent: 20px;
+    font-size: 18px;
+  }
+
+  .acces-control input[type=checkbox] {
+    display: none;
+  }
+
+  .acces-control label {
+    display: block;
+    position: absolute;
+    margin-top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    content: "";
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0px 0px 0px 2px #ccc;
+  }
+
+  #loginRemember:checked ~ label[for=loginRemember] {
+    background: $brandColor;
+    border: 3px solid white;
+    box-shadow: 0px 0px 0px 2px $brandColor;
+  }
+
+
+  #loginShowpass:checked ~ label[for=loginShowpass] {
+    background: $brandColor;
+    border: 3px solid white;
+    box-shadow: 0px 0px 0px 2px $brandColor;
+  }
+
+
+  .acces-control input[type="submit"] {
+    background: $brandColor;
+    border: 0;
+    height: 30px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-left: 50px;
+  }
+
+  .acces-control input[type="submit"]:hover {
+    background: $brandColor;
+  }
+
+  .forgot {
+    margin-top: 25px;
+    display: block;
+    font-size: 13px;
+    text-align: left;
+    font-weight: bold;
+
+    padding: 0px 0px 25px 25px;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #777;
+    font-weight: bold;
+  }
+
+  .remlog{
+    border-bottom: 1px solid #ddd;
+  }
+
+  .remember {
+    padding-bottom: 30px;
+    font-size: 15px;
+    text-indent: 20px;
+    line-height: 15px;
+    margin-left: 25px;
+    display: inline-block;
+  }
+
+  .showpassword {
+    padding-top: 20px;
+    font-size: 15px;
+    text-indent: 20px;
+    line-height: 15px;
+    margin-left: 25px;
+    display: block;
+  }
+
+  .forgot h3{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+
+  .forgot a{
+    color: $brandColor;
+    font-size: 17px;
+  }
+
+  .close{
+    width: 32px;
+    height: 32px;
+    display: block;
+    border: 0;
+    border-radius: 0px 3px 0px 0px;
+    position: absolute;
+    right: 0px;
+    padding: 0px;
+    background: #fff;
+    cursor: pointer;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .close i {
+    font-size: 25px;
+  margin-left: 6px;
+  }
+
+}
+
+
+
+
+
+@keyframes bounceInDown{
+0% {opacity: 0;	transform: translateY(-2000px);}
+60% {opacity: 1;transform: translateY(30px);}
+80% {transform: translateY(-10px);}
+100% {transform: translateY(0);}
+}

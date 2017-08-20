@@ -2,70 +2,108 @@
 
 @section('content')
 
-  <h1>This is the guest book tour page {{$package_id}}</h1>
+  <div class="book-tour-form-wrapper">
+    <div class="book-tour-form-header">
+      <h2>Please Fill The Form Below To Book Tour</h2>
+    </div>
 
 
-  {!! Form::open(['method' => 'POST', 'action' => 'PackageControllar@store']) !!}
+    <div class="book-tour-form">
 
-  <div class="form-grup">
+      {!! Form::open(['method' => 'POST', 'action' => 'PackageControllar@store']) !!}
 
-		{!! Form::label('name', 'Name') !!}
-		{!! Form::text('name', null, ['class' => 'form-control']) !!}
+      <div class="form-grup">
 
-	</div>
+        {!! Form::label('name', 'Name') !!}
+        {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name']) !!}
 
-  <div class="form-grup">
+        @if ($errors->has('name'))
+            <span>
+                <strong>{{ $errors->first('name') }}</strong>
+            </span>
+        @endif
 
-		{!! Form::label('email', 'Email') !!}
-		{!! Form::email('email', null, ['class' => 'form-control']) !!}
+      </div>
 
-	</div>
+      <div class="form-grup">
 
-  <div class="form-grup">
+        {!! Form::label('email', 'Email') !!}
+        {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Email Address']) !!}
 
-		{!! Form::label('contact_number', 'Contact Number') !!}
-		{!! Form::text('contact_number', null, ['class' => 'form-control']) !!}
+        @if ($errors->has('email'))
+            <span>
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+      </div>
 
-	</div>
+      <div class="form-grup">
 
-  <div class="form-grup">
+        {!! Form::label('contact_number', 'Contact Number') !!}
+        {!! Form::text('contact_number', null, ['class' => 'form-control', 'placeholder' => 'Enter Contact Number']) !!}
 
-		{!! Form::label('postal_address', 'Postal Address') !!}
-		{!! Form::text('postal_address', null, ['class' => 'form-control']) !!}
+        @if ($errors->has('contact_number'))
+            <span>
+                <strong>{{ $errors->first('contact_number') }}</strong>
+            </span>
+        @endif
+      </div>
 
-	</div>
+      <div class="form-grup">
 
-  <div class="form-grup">
+        {!! Form::label('postal_address', 'Postal Address') !!}
+        {!! Form::text('postal_address', null, ['class' => 'form-control', 'placeholder' => 'Enter Postal Address']) !!}
 
-      {!! Form::label('country_id', 'Country') !!}
-      {!! Form::select('country_id', [''=>'Choose Country'] + $countries, null, ['class' => 'form-control']) !!}
+        @if ($errors->has('postal_address'))
+            <span>
+                <strong>{{ $errors->first('postal_address') }}</strong>
+            </span>
+        @endif
+      </div>
 
-	</div>
+      <div class="form-grup">
 
-  <div class="form-grup">
+          {!! Form::label('country_id', 'Country') !!}
+          {!! Form::select('country_id', [''=>'Choose Country'] + $countries, null, ['class' => 'form-control']) !!}
 
-		{!! Form::label('passport_info', 'Passport Id') !!}
-		{!! Form::text('passport_info', null, ['class' => 'form-control']) !!}
+          @if ($errors->has('country_id'))
+              <span>
+                  <strong>{{ $errors->first('country_id') }}</strong>
+              </span>
+          @endif
+      </div>
 
-	</div>
+      <div class="form-grup">
+
+        {!! Form::label('passport_info', 'Passport Id') !!}
+        {!! Form::text('passport_info', null, ['class' => 'form-control', 'placeholder' => 'Enter Passport Number']) !!}
+
+        @if ($errors->has('passport_info'))
+            <span>
+                <strong>{{ $errors->first('passport_info') }}</strong>
+            </span>
+        @endif
+      </div>
 
 
- <div class="form-grup">
+     <div class="form-grup">
 
-   {!! Form::hidden('package_id', $value = $package_id, ['class' => 'form-control']) !!}
+       {!! Form::hidden('package_id', $value = $package_id, ['class' => 'form-control']) !!}
 
- </div>
+     </div>
 
 
-  <div class="form-group">
+      <div class="form-grup">
 
-		{!! Form::submit('Book Tour', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Book Tour', ['class' => 'btn', 'id' => 'bookTourBtn']) !!}
 
-	</div>
+      </div>
 
-	{!! Form::close() !!}
+      {!! Form::close() !!}
 
-  @include('includes.inputErrors')
+    </div>
+  </div>
+
 
 
 @stop

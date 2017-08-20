@@ -226,7 +226,7 @@
   overflow: hidden;
   margin: 10px 8px;
   width: 32%;
-  height: 400px;
+  height: 280px;
   color: #ffffff;
   font-size: 16px;
   text-align: left;
@@ -237,12 +237,14 @@
   position: absolute;
   top: 0;
   z-index: 10;
-  padding: 20px 40px;
+  padding: 20px;
   h2 {
     font-weight: 600;
+    font-size: 20px;
   }
   h4 {
     font-weight: 500;
+    font-size: 15px;
   }
   p {
     font-weight: 200;
@@ -375,13 +377,18 @@
   #special-packages {
     .item {
         text-align: center;
-        height: 400px;
-        padding: 50px;
+        height: 380px;
+        padding: 85px;
         opacity: .2;
         -webkit-transform: scale3d(0.8, 0.8, 1);
         transform: scale3d(0.8, 0.8, 1);
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
     }
 
     .shadow-effect {
@@ -409,7 +416,6 @@
         -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
         width: 100%;
-        height: 80%;
     }
 
     .owl-nav {
@@ -425,43 +431,46 @@
       }
     }
 
-    .package-caption-left {
-      float: left;
-      width: 50%;
-      text-align: left;
-      padding: 5px 5px 5px 15px;
-      .package-caption-name {
-        h2 {
-          font-size: 16px;
-          font-weight: 400;
+    .package-caption {
+      background: #fff;
+      .package-caption-left {
+        float: left;
+        width: 50%;
+        text-align: left;
+        padding: 5px 5px 5px 15px;
+        .package-caption-name {
+          h2 {
+            font-size: 16px;
+            font-weight: 400;
+          }
         }
-      }
-      .package-caption-rating {
-        ul {
-          li {
-            list-style: none;
-            display: inline-block;
-            i {
-              color: $brandColor;
+        .package-caption-rating {
+          ul {
+            li {
+              list-style: none;
+              display: inline-block;
+              i {
+                color: $brandColor;
+              }
             }
           }
         }
       }
-    }
 
-    .package-caption-right {
-      float: right;
-      width: 50%;
-      text-align: right;
-      padding: 5px 15px 5px 5px;
-      .package-caption-save {
-        span {
-          color: #000;
+      .package-caption-right {
+        float: right;
+        width: 50%;
+        text-align: right;
+        padding: 5px 15px 5px 5px;
+        .package-caption-save {
+          span {
+            color: #000;
+          }
         }
-      }
-      .package-caption-price {
-        color: $brandColor;
-        font-weight: 700;
+        .package-caption-price {
+          color: $brandColor;
+          font-weight: 700;
+        }
       }
     }
 
@@ -478,7 +487,6 @@
         border-radius: 3px;
       }
     }
-
 
     .owl-carousel.owl-theme .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
         background: #28CB75;

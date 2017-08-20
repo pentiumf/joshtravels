@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\UserEditBookDetailsRequset;
 use App\User;
 use App\Package;
 use App\Joshbooking;
@@ -55,7 +56,7 @@ class UserBookingController extends Controller
     }
 
     //Store edit
-    public function update(Request $request, $id) {
+    public function update(UserEditBookDetailsRequset $request, $id) {
       $bookingDetail = Bookingdetail::findOrFail($id);
       $input = $request->all();
 

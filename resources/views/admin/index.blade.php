@@ -67,7 +67,6 @@
 
 
     <div class="admin-index-notification-pannel">
-      <h2>Notification Pannel</h2>
     </div>
 
 

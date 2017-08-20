@@ -19,7 +19,6 @@
 <body>
 
 
-
     <nav id="HomeNav">
         <div class="navbar-top clearfix nav-pad">
           <div class="brand">
@@ -30,11 +29,13 @@
                 <a id="SignIn" href="#">Sign Up / In</a>
             @else
                 <div class="auth-control">
-                    <a id="authName" href="#">
+                    <a id="authName" href="javascript:void(0)">
                         {{ Auth::user()->name }} <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </a>
 
-                    <div class="auth-dropdown">
+                    <div id="authDropDown" class="auth-dropdown">
+                      <a href="{{route('user.bookings')}}">My Bookings</a>
+                      <a href="{{route('user.bookingDetails')}}">Booking Details</a>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
@@ -67,6 +68,7 @@
       </nav>
 
     <div id="AuthControl">
+
       <div class='login acces-control'>
       	  <form class="" method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
@@ -77,10 +79,20 @@
 
           		 <div class='user'>
           		    <input id="email" name='email' placeholder='E-mail' type='email' value="{{ old('email') }}" required autofocus>
+                  @if ($errors->has('email'))
+                      <span class="auth-error">
+                          <strong>{{ $errors->first('email') }}</strong>
+                      </span>
+                  @endif
           		 </div>
 
           		 <div class='pw'>
           		    <input id='password' name='password' placeholder='Password' type='password' required>
+                  @if ($errors->has('password'))
+                      <span class="auth-error">
+                          <strong>{{ $errors->first('password') }}</strong>
+                      </span>
+                  @endif
           		 </div>
 
           		 <div class='remlog'>
@@ -121,14 +133,29 @@
 
                  <div class='user'>
             		    <input id="name" name='name' placeholder='Name' type='text' value="{{ old('name') }}" required autofocus>
+                    @if ($errors->has('name'))
+                        <span class="auth-error">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
+                    @endif
             		 </div>
 
             		 <div class='user'>
             		    <input id="email" name='email' placeholder='E-mail' type='email' value="{{ old('email') }}" required>
+                    @if ($errors->has('email'))
+                        <span class="auth-error">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
             		 </div>
 
             		 <div class='pw'>
             		    <input id='password' name='password' placeholder='Password' type='password' required>
+                    @if ($errors->has('password'))
+                        <span class="auth-error">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
             		 </div>
 
                  <div class='pw'>
@@ -136,7 +163,7 @@
             		 </div>
 
             		 <div class='remlog'>
-            		     <input type='submit' value='Register'>
+            		     <input id="registerSubmit" type='submit' value='Register'>
             		 </div>
 
                  <div class="forgot">
@@ -205,8 +232,16 @@
                   <div class="item"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502838456/iata_egclbb.png" alt=""></div>
                   <div class="item"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502838456/emirates_logo_sn5own.png" alt=""></div>
                   <div class="item"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502838456/delta_airlines_iljxuo.png" alt=""></div>
-                  <div class="item"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502838456/delta_airlines_iljxuo.png" alt=""></div>
-
+              </div>
+              <div id="footerSocial">
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+                <br>
+                <span>© Josh Travels 2017.</span>
               </div>
             </div>
           </div>

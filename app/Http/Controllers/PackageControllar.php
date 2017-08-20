@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\BookTourRequest;
 use App\Package;
 use App\Country;
 use App\User;
@@ -20,7 +21,8 @@ class PackageControllar extends Controller
 
     public function details($id) {
       $package = Package::findOrFail($id);
-      return view('pages.packages.details', compact('package'));
+      $recommendedPackages = Package::limit(3)->get();
+      return view('pages.packages.details', compact('package', 'recommendedPackages'));
     }
 
     public function book($id) {
@@ -39,7 +41,7 @@ class PackageControllar extends Controller
 
     }
 
-    public function store(Request $request) {
+    public function store(BookTourRequest $request) {
       //return $request->all();
       if (Auth::user()) {
         $input = $request->except('package_id');

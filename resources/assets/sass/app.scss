@@ -31,7 +31,7 @@ body {
 
 footer {
   .footer-top {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     background-image: url(http://res.cloudinary.com/hapiglsx2/image/upload/v1502740161/darkmount_fluasb.jpg);
     background-position: center;
     background-size: cover;
@@ -63,7 +63,40 @@ footer {
   }
 
   .footer-bottom {
+    background-color: #121212;
+    .footer-bottom-adds {
+      padding: 100px 0;
+      margin: auto 200px;
+      #topFooterAdds {
+        .item {
+          width: 200px;
+          height: 100px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+      }
+      #footerSocial {
+        text-align: center;
+        padding: 20px 0;
+        ul {
+          li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 20px;
+            a {
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+        }
+      }
 
+    }
   }
 }
 
@@ -82,3 +115,7 @@ footer {
 @import "adminBooking";
 @import "adminPackage";
 @import "adminForm";
+@import "ourPackages";
+@import "bookTour";
+@import "userbookings";
+@import "fileUpload";

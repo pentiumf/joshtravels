@@ -1,0 +1,85 @@
+//
+.book-tour-form-wrapper {
+    width: 30%;
+    margin: 50px auto;
+    box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
+    padding: 20px 50px;
+  .book-tour-form-header {
+    text-align: center;
+    padding: 20px 0;
+    h2 {
+      color: $brandColor;
+      font-weight: 600;
+      font-size: 21px;
+      text-transform: uppercase;
+    }
+  }
+  .book-tour-form {
+    .form-grup {
+      margin-bottom: 20px;
+      label {
+        display: none;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid #ccc;
+        background-color: #eee;
+        border-radius: 3px;
+        &:focus {
+          box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
+        }
+      }
+      select{
+        width: 100%;
+        height: 40px;
+        background: #eee;
+        border: 1px solid #ccc;
+        font-size: 15px;
+        border-radius: 3px;
+        outline: none;
+      }
+      .btn {
+        background-color: $brandColor;
+        text-decoration: none;
+        color: #fff;
+        box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
+        padding: 11px 30px;
+        display: inline-block;
+        margin-top: 10px;
+        border-radius: 3px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      strong {
+        font-weight: 400;
+        font-size: 14px;
+        color: #f00;
+      }
+    }
+  }
+}
+
+#userBookTour {
+  .form-grup {
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+#bookUserLogin {
+  padding: 20px 40px;
+
+      margin: 100px auto;
+      box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
+
+}
+
+#bookUserLoginHead {
+      padding: 60px 0;
+}

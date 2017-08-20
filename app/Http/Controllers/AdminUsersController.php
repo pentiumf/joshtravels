@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\UsersRequest;
+use App\Http\Requests\AdminUserEditRequest;
 use App\User;
 use App\Role;
 
@@ -89,17 +90,17 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AdminUserEditRequest $request, $id)
     {
       $user = User::findOrFail($id);
 
       if ($request->password == '') {
           $input = $request->except('password');
       } else {
+          $input['password'] = bcrypt($request->password);
           $input = $request->all();
       }
 
-      $input['password'] = bcrypt($request->password);
 
       $user->update($input);
 

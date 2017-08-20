@@ -84,7 +84,13 @@ module.exports = __webpack_require__(2);
 //require('./bootstrap');
 
 $(document).ready(function () {
-  console.log("nicky");
+  //Togle Auth Controll
+  $("#authName").click(function (e) {
+    e.preventDefault();
+    //$(this).toggleClass("addBgToAuthPull");
+    $("#authDropDown").toggleClass("showAuthNav");
+  });
+
   //Login Controll
   //Sign In Button
   $('#SignIn').on('click', function () {
@@ -296,11 +302,11 @@ $(document).ready(function () {
   $('#topFooterAdds').owlCarousel({
     loop: true,
     center: true,
-    items: 3,
+    items: 5,
     margin: 0,
     autoplay: true,
     dots: false,
-    nav: true,
+    nav: false,
     autoplayTimeout: 8500,
     smartSpeed: 450,
     responsive: {
@@ -341,6 +347,55 @@ $(document).ready(function () {
     };
 
     var accordion = new Accordion($('#accordion'), false);
+  });
+
+  //Image upload
+
+  function readImageFile(file, img) {
+
+    if (file.files && file.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $(img).attr('src', e.target.result);
+      };
+      reader.readAsDataURL(file.files[0]);
+    }
+  }
+
+  $("#createProfileImageUploadId").click(function () {
+    $("#createProfileImg").trigger('click');
+  });
+
+  $("#createProfileImg").change(function () {
+    var imageSize = this.files[0].size;
+    var extensions = ['png', 'jpg', 'jpeg'];
+    if ($.inArray($(this).val().split('.').pop().toLowerCase(), extensions) == -1) {
+      alert('only png and jpg is allowed');
+      this.value = '';
+      return false;
+    }
+
+    if (imageSize > 10000000) {
+      alert('image size should be less than 10mb');
+      this.value = '';
+      return false;
+    }
+
+    var image = $("#CreateProfilePreview");
+    $("#profile-upload-icon").hide();
+    image.show();
+    readImageFile(this, image);
+    $("#profile-pic-upload-btn").hide();
+    $("#remove-profile-pic").show();
+  });
+
+  $("#remove-profile-pic").click(function () {
+    $("#CreateProfilePreview").attr('src', '');
+    $("#createProfileImg").val('');
+    $("#CreateProfilePreview").hide();
+    $("#profile-upload-icon").show();
+    $(this).hide();
+    $("#profile-pic-upload-btn").show();
   });
 });
 

@@ -34,14 +34,16 @@ Route::get('tester', function() {
 
   foreach ($b as $c) {
     //echo "<pre>.$c->package_id.</pre>";
-    echo Package::findOrFail($c->package_id);
+    $packs[] = Package::findOrFail($c->package_id);
   }
+
+  return $packs;
 
 });
 
 Route::get('tester2', function() {
-  $a = Joshbooking::findOrFail(1);
-  return $a->user;
+  $a = Package::limit(3)->get();
+  return $a;
   //return $a->joshbookings;
 
 });

@@ -2,39 +2,6 @@
 
 @section('content')
 
-
-<!-- @if(Auth::user())
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@else
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are not logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endif -->
-
 <div class="home-banner-bg">
   <div class="home-banner-cap">
     <h1>Tour With Josh Travel</h1>
@@ -305,7 +272,7 @@
           <h3>Josh Travels</h3>
           <h5>Book Now</h5>
         </figcaption>
-        <a href="#"></a>
+        <a href="{{route('packages')}}"></a>
       </figure>
 
       <figure class="top-destination"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502614788/swizzarland_xcdbeo.jpg" alt="sample87"/>
@@ -318,7 +285,7 @@
           <h3>Josh Travels</h3>
           <h5>Book Now</h5>
         </figcaption>
-        <a href="#"></a>
+        <a href="{{route('packages')}}"></a>
       </figure>
 
       <figure class="top-destination"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502614788/italy_qsaser.jpg" alt="sample87"/>
@@ -331,7 +298,7 @@
           <h3>Josh Travels</h3>
           <h5>Book Now</h5>
         </figcaption>
-        <a href="#"></a>
+        <a href="{{route('packages')}}"></a>
       </figure>
 
       <figure class="top-destination"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502614789/spain_bw4xhi.jpg" alt="sample87"/>
@@ -344,7 +311,7 @@
           <h3>Josh Travels</h3>
           <h5>Book Now</h5>
         </figcaption>
-        <a href="#"></a>
+        <a href="{{route('packages')}}"></a>
       </figure>
 
       <figure class="top-destination"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502614783/london_avlfle.jpg" alt="sample87"/>
@@ -357,7 +324,7 @@
           <h3>Josh Travels</h3>
           <h5>Book Now</h5>
         </figcaption>
-        <a href="#"></a>
+        <a href="{{route('packages')}}"></a>
       </figure>
 
       <figure class="top-destination"><img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502580691/05_cjxqjv.jpg" alt="sample87"/>
@@ -370,7 +337,7 @@
           <h3>Josh Travels</h3>
           <h5>Book Now</h5>
         </figcaption>
-        <a href="#"></a>
+        <a href="{{route('packages')}}"></a>
       </figure>
 
 
@@ -390,13 +357,15 @@
 
   <div id="special-packages" class="owl-carousel">
 
+            @if($packages)
+            @foreach($packages as $package)
             <div class="item">
               <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
+                <img src="{{$package->photo ? '/images/'.$package->photo : 'https://gitlab.kitware.com/assets/no_group_avatar-4a9d347a20d783caee8aaed4a37a65930cb8db965f61f3b72a2e954a0eaeb8ba.png'}}" alt="">
                 <div class="package-caption clearfix">
                   <div class="package-caption-left">
                     <div class="package-caption-name">
-                      <h2>Tour Name</h2>
+                      <h2>{{$package->name}}</h2>
                     </div>
                     <div class="package-caption-rating">
                       <ul>
@@ -404,7 +373,7 @@
                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
                       </ul>
                     </div>
                   </div>
@@ -413,220 +382,18 @@
                       <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
                     </div>
                     <div class="package-caption-price">
-                      <span>$1000</span>
+                      <span>{{$package->price}}</span>
                     </div>
                   </div>
                 </div>
-                <a href="#"></a>
+                <a href="{{ route('packages.details', $package->id) }}"></a>
                 <div class="package-day-night">
-                  <span>3 days 3 nights</span>
+                  <span>{{$package->duration}}</span>
                 </div>
               </div>
             </div>
-
-            <div class="item">
-              <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
-                <div class="package-caption clearfix">
-                  <div class="package-caption-left">
-                    <div class="package-caption-name">
-                      <h2>Tour Name</h2>
-                    </div>
-                    <div class="package-caption-rating">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="package-caption-right">
-                    <div class="package-caption-save">
-                      <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="package-caption-price">
-                      <span>$1000</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"></a>
-                <div class="package-day-night">
-                  <span>3 days 3 nights</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
-                <div class="package-caption clearfix">
-                  <div class="package-caption-left">
-                    <div class="package-caption-name">
-                      <h2>Tour Name</h2>
-                    </div>
-                    <div class="package-caption-rating">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="package-caption-right">
-                    <div class="package-caption-save">
-                      <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="package-caption-price">
-                      <span>$1000</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"></a>
-                <div class="package-day-night">
-                  <span>3 days 3 nights</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
-                <div class="package-caption clearfix">
-                  <div class="package-caption-left">
-                    <div class="package-caption-name">
-                      <h2>Tour Name</h2>
-                    </div>
-                    <div class="package-caption-rating">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="package-caption-right">
-                    <div class="package-caption-save">
-                      <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="package-caption-price">
-                      <span>$1000</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"></a>
-                <div class="package-day-night">
-                  <span>3 days 3 nights</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
-                <div class="package-caption clearfix">
-                  <div class="package-caption-left">
-                    <div class="package-caption-name">
-                      <h2>Tour Name</h2>
-                    </div>
-                    <div class="package-caption-rating">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="package-caption-right">
-                    <div class="package-caption-save">
-                      <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="package-caption-price">
-                      <span>$1000</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"></a>
-                <div class="package-day-night">
-                  <span>3 days 3 nights</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
-                <div class="package-caption clearfix">
-                  <div class="package-caption-left">
-                    <div class="package-caption-name">
-                      <h2>Tour Name</h2>
-                    </div>
-                    <div class="package-caption-rating">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="package-caption-right">
-                    <div class="package-caption-save">
-                      <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="package-caption-price">
-                      <span>$1000</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"></a>
-                <div class="package-day-night">
-                  <span>3 days 3 nights</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="shadow-effect">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
-                <div class="package-caption clearfix">
-                  <div class="package-caption-left">
-                    <div class="package-caption-name">
-                      <h2>Tour Name</h2>
-                    </div>
-                    <div class="package-caption-rating">
-                      <ul>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="package-caption-right">
-                    <div class="package-caption-save">
-                      <span><i class="fa fa-bookmark-o" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="package-caption-price">
-                      <span>$1000</span>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"></a>
-                <div class="package-day-night">
-                  <span>3 days 3 nights</span>
-                </div>
-              </div>
-            </div>
+            @endforeach
+            @endif
 
 
 

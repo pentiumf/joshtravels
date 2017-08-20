@@ -47,24 +47,27 @@
             display: block;
             padding: 11px 20px;
             &:hover {
-              background-color: #FF7E76;
+              background-color: $brandColorHover;
+
             }
           }
 
           .auth-dropdown {
+            display: none;
             position: absolute;
             background-color: #fff;
-
             right: 0;
             box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
             padding: 10px 0;
-            width: 150px;
+            width: 200px;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             a {
               display: block;
               padding: 5px 15px;
               font-size: 14px;
+              text-decoration: none;
+              color: $brandColor;
               &:hover {
                 background-color: #eee;
               }
@@ -112,4 +115,8 @@
 
   }
 
+}
+
+.showAuthNav {
+  display: block !important;
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PackageCreateRequest;
+use App\Http\Requests\PackageEditRequest;
 use App\Package;
 
 class AdminPackageContoller extends Controller
@@ -34,7 +36,7 @@ class AdminPackageContoller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PackageCreateRequest $request)
     {
         $input = $request->all();
 
@@ -84,7 +86,7 @@ class AdminPackageContoller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PackageEditRequest $request, $id)
     {
         $package = Package::findOrFail($id);
 

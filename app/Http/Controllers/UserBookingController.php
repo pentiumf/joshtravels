@@ -47,7 +47,7 @@ class UserBookingController extends Controller
       $bookingdetail = $user->bookingdetail;
 
       //return $bookingdetail;
-      return view('user.booking.bookingdetail', compact('bookingdetail'));
+      return view('user.booking.bookingDetail', compact('bookingdetail'));
     }
 
     //This is for editting the users booking details

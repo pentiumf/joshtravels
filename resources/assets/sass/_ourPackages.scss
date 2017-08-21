@@ -357,3 +357,33 @@
       }
     }
 }
+
+
+
+.flash-pop-message {
+  background-color: #383838;
+  width: 100%;
+  color: #fff;
+  padding: 10px 80px;
+  h2 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  p {
+
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+    color: $textColor;
+    border-radius: 2px;
+    margin: 10px 0;
+    
+  }
+}

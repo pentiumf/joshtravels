@@ -12,8 +12,8 @@
 
       <div class="user-bookings clearfix">
 
-        @if ($packages)
-        @foreach ($packages as $package)
+        @if ($userBookings->count() > 0)
+        @foreach (array_reverse($packages) as $package)
 
         <div class="admin-package">
           <div class="admin-package-image">
@@ -29,7 +29,13 @@
         </div>
 
         @endforeach
+
+        @else
+        <p>You Have No Bookings Yet</p>
+
+
         @endif
+
 
       </div>
 

@@ -102,6 +102,11 @@
       </aside>
 
       <div id="adminPageContent" class="clearfix">
+        @if(Session::has('deleted_user'))
+
+            <h1>{{session('deleted_user')}}</h1>
+
+        @endif
         @yield('content')
       </div>
 

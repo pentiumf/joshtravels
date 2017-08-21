@@ -19,12 +19,14 @@ class UserBookingController extends Controller
       $user = Auth::user();
       $userBookings = $user->joshbookings;
 
-      foreach ($userBookings as $userBooking) {
-        $packages[] = Package::findOrFail($userBooking->package_id);
+      if ($userBookings->count() > 0) {
+        foreach ($userBookings as $userBooking) {
+          $packages[] = Package::findOrFail($userBooking->package_id);
 
+        }
       }
 
-      return view('user.booking.bookings', compact('packages'));
+      return view('user.booking.bookings', compact('packages', 'userBookings'));
     }
 
     //This display a given booking Info
@@ -43,6 +45,7 @@ class UserBookingController extends Controller
     public function bookingDetails() {
       $user = Auth::user();
       $bookingdetail = $user->bookingdetail;
+
       //return $bookingdetail;
       return view('user.booking.bookingdetail', compact('bookingdetail'));
     }
@@ -69,9 +72,10 @@ class UserBookingController extends Controller
 
     }
 
-
-
-
+    //Delete userBookings
+    // public function delete($id) {
+    //
+    // }
 
 
 

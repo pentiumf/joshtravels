@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\BookTourRequest;
+use Illuminate\Support\Facades\Session;
 use App\Package;
 use App\Country;
 use App\User;
@@ -15,7 +16,8 @@ use App\Joshbooking;
 class PackageControllar extends Controller
 {
     public function index() {
-      $packages = Package::all();
+
+      $packages = Package::orderBy('id', 'desc')->get();
       return view('pages.packages.index', compact('packages'));
     }
 
@@ -29,13 +31,13 @@ class PackageControllar extends Controller
       $package_id = $id;
 
       if (Auth::guest()) {
-        $countries = Country::pluck('name', 'id')->all();
+        $countries = Country::pluck('nicename', 'id')->all();
         return view('pages.packages.guestBooking', compact('package_id', 'countries'));
       }
       elseif (Auth::User()) {
         $user = Auth::user();
         $userBookingInfo = $user->bookingdetail;
-        $countries = Country::pluck('name', 'id')->all();
+        $countries = Country::pluck('nicename', 'id')->all();
         return view('pages.packages.userBooking', compact('package_id', 'countries', 'userBookingInfo', 'user'));
       }
 
@@ -58,6 +60,7 @@ class PackageControllar extends Controller
           $joshGet->bookingdetail_id = $insertedId;
           $joshGet->user_id = $userId;
           $joshGet->save();
+          Session::flash('booking_made', 'Your Booking Has Been Succesfully Recievied');
           return redirect('packages');
 
         } else {
@@ -76,6 +79,8 @@ class PackageControllar extends Controller
         $joshGetGuest->package_id = $guestPackageId;
         $joshGetGuest->bookingdetail_id = $guestInsertedId;
         $joshGetGuest->save();
+        Session::flash('booking_made', 'Your Booking Has Been Succesfully Recievied');
+        //return view('pages.packages.bookingMsg');
         return redirect('packages');
       }
 
@@ -98,7 +103,6 @@ class PackageControllar extends Controller
 
         foreach ($packageIDs as $packageID) {
           if ($packageID == $packageId) {
-            //echo "You already booked this package";
             $shouldBookUser = false;
             break;
           }
@@ -113,10 +117,11 @@ class PackageControllar extends Controller
         $joshBookUser->user_id = $userId;
         $joshBookUser->bookingdetail_id = $bookingDetailsId;
         $joshBookUser->save();
-        echo "Booking Saved";
+        Session::flash('booking_made', 'Your Booking Has Been Succesfully Recievied');
+        return redirect('packages');
       } else {
-        //Should not book user
-        echo "You already booked this package";
+        Session::flash('already_booked', 'Sorry You Already Booked This Package');
+        return redirect('packages');
       }
 
     }

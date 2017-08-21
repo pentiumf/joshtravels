@@ -15,8 +15,11 @@
     text-align: center;
     color: #fff;
       h1 {
-        font-weight: 500;
-        font-size: 50px;
+        font-weight: 600;
+        font-size: 60px;
+        text-shadow: 4px 3px 0 #1D1D3B, 9px 8px 0 rgba(0,0,0,0.15);
+        text-transform: uppercase;
+        letter-spacing: -2px;
       }
       p {
         font-size: 20px;

@@ -2,7 +2,29 @@
 
 @section('content')
 
+@if(Session::has('booking_made'))
 
+
+<div class="flash-pop-message">
+  <h2>Hello Customer</h2>
+  <p>Your Booking Has Succesfully been submited, we will get back to you in a while. Thank You</p>
+  <button id="bookingFlas">OK</button>
+</div>
+
+    <!-- <h1>{{session('booking_made')}}</h1> -->
+@endif
+
+@if(Session::has('already_booked'))
+
+
+<div class="flash-pop-message">
+  <h2>Hello Customer</h2>
+  <p>Sorry, You have already booked this package.</p>
+  <button id="already_bookedFlash">OK</button>
+</div>
+
+    <!-- <h1>{{session('booking_made')}}</h1> -->
+@endif
 
 <div class="our-packages-wrapper">
   <div class="our-packages-header">

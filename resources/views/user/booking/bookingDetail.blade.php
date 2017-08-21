@@ -7,9 +7,11 @@
 
     <div class="user-bookings-header">
       <h1>Your Booking Details</h1>
+
+      @if($bookingdetail != NULL)
+      
       <p>We use this details to process all your bookings</p>
     </div>
-
 
     <div class="user-bookings clearfix">
 
@@ -27,6 +29,11 @@
 
     </div>
 
+    @else
+
+    <p>You have no booking details, please book a package and we will save your details for future use.</p>
+
+    @endif
 
   </div>
 </div>

@@ -397,6 +397,15 @@ $(document).ready(function () {
     $(this).hide();
     $("#profile-pic-upload-btn").show();
   });
+
+  //Booking Flash Messsage
+  $("#bookingFlas").click(function () {
+    $(this).parent().remove();
+  });
+
+  $("#already_bookedFlash").click(function () {
+    $(this).parent().remove();
+  });
 });
 
 /***/ }),

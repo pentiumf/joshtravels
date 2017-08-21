@@ -57,7 +57,7 @@
 
   width: 15%;
   height: 100%;
-  background-color: #a0a0a0;
+  background-color: $brandColor;
   box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
   z-index: 20;
   position: fixed;
@@ -162,7 +162,7 @@
 
     .submenu {
      display: none;
-     background: #878787;
+     background: #2C3A5A;
      font-size: 14px;
     }
 

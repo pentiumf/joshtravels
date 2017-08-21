@@ -32,6 +32,7 @@
 body {
   font-family: 'Titillium Web';
   color: #636363;
+  position: relative;
 }
 
 footer .footer-top {
@@ -114,7 +115,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #HomeNav {
-  background-color: #0074d9;
+  background-color: #fff;
   width: 100%;
   position: fixed;
   top: 0;
@@ -129,12 +130,35 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #HomeNav .navbar-top .brand {
+  width: 40%;
+  float: left;
+}
+
+#HomeNav .navbar-top .brand .company-logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+
+#HomeNav .navbar-top .brand .company-logo img {
+  width: 100%;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: inline-block;
+  vertical-align: -8px;
+}
+
+#HomeNav .navbar-top .brand .brand-name {
+  width: 30%;
   float: left;
 }
 
 #HomeNav .navbar-top .brand a {
-  font-size: 30px;
-  color: #fff;
+  font-size: 20px;
+  color: #001F3F;
   text-decoration: none;
   font-weight: 600;
 }
@@ -146,7 +170,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 #HomeNav .navbar-top .signup-control #SignIn {
   border: 2px solid #fff;
   padding: 6px 23px;
-  color: #fff;
+  color: #333;
   text-transform: uppercase;
   line-height: 50px;
   text-decoration: none;
@@ -166,13 +190,19 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 #HomeNav .navbar-top .signup-control .auth-control #authName {
   text-decoration: none;
-  color: #fff;
+  color: #001F3F;
   display: block;
   padding: 11px 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 #HomeNav .navbar-top .signup-control .auth-control #authName:hover {
-  background-color: #0067cc;
+  background-color: #fff;
+}
+
+#HomeNav .navbar-top .signup-control .auth-control #authName i {
+  margin-left: 10px;
 }
 
 #HomeNav .navbar-top .signup-control .auth-control .auth-dropdown {
@@ -180,8 +210,8 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   position: absolute;
   background-color: #fff;
   right: 0;
-  -webkit-box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
-          box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   width: 200px;
   border-bottom-left-radius: 5px;
@@ -193,7 +223,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   padding: 5px 15px;
   font-size: 14px;
   text-decoration: none;
-  color: #0074d9;
+  color: #001F3F;
 }
 
 #HomeNav .navbar-top .signup-control .auth-control .auth-dropdown a:hover {
@@ -201,7 +231,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #HomeNav .navbar-bottom {
-  background-color: #fff;
+  background-color: #001F3F;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -217,15 +247,14 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 #HomeNav .navbar-bottom .nav-routes ul li a {
   text-decoration: none;
-  padding-right: 10px;
-  color: #636363;
-  font-size: 14px;
-  font-weight: 500;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
   margin-right: 30px;
 }
 
 #HomeNav .navbar-bottom .nav-routes ul li a:hover {
-  color: #0074d9;
+  color: #fff;
 }
 
 #HomeNav .navbar-bottom .nav-hotline {
@@ -233,9 +262,10 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #HomeNav .navbar-bottom .nav-hotline a {
-  color: #636363;
+  color: #fff;
   text-decoration: none;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .showAuthNav {
@@ -261,8 +291,11 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .home-banner-bg .home-banner-cap h1 {
-  font-weight: 500;
-  font-size: 50px;
+  font-weight: 600;
+  font-size: 60px;
+  text-shadow: 4px 3px 0 #1D1D3B, 9px 8px 0 rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: -2px;
 }
 
 .home-banner-bg .home-banner-cap p {
@@ -297,7 +330,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   cursor: pointer;
   font-size: 18px;
   font-weight: 400;
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .home-banner-bg .home-tab-pannel ul li:hover {
@@ -401,7 +434,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   font-size: 15px;
   border-radius: 50px;
   cursor: pointer;
-  background-color: #0074d9;
+  background-color: #001F3F;
   text-transform: uppercase;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
           box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
@@ -463,7 +496,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .top-destinations-wrapper .top-destinations-container .top-destination-header h1 {
-  color: #0074d9;
+  color: #001F3F;
   font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
@@ -582,7 +615,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 .top-destination h5 {
   font-weight: normal;
-  background-color: #0074d9;
+  background-color: #001F3F;
   padding: 3px 10px;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
@@ -638,7 +671,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 .special-tourpackages-wrappers .special-tourpackages-header h2 {
   font-size: 30px;
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .special-tourpackages-wrappers .special-tourpackages-header p {
@@ -698,7 +731,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 .special-tourpackages-wrappers #special-packages .owl-nav div {
   display: inline-block;
-  color: #0074d9;
+  color: #001F3F;
   font-size: 30px;
 }
 
@@ -728,7 +761,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .special-tourpackages-wrappers #special-packages .package-caption .package-caption-left .package-caption-rating ul li i {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .special-tourpackages-wrappers #special-packages .package-caption .package-caption-right {
@@ -743,7 +776,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .special-tourpackages-wrappers #special-packages .package-caption .package-caption-right .package-caption-price {
-  color: #0074d9;
+  color: #001F3F;
   font-weight: 700;
 }
 
@@ -754,7 +787,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .special-tourpackages-wrappers #special-packages .package-day-night span {
-  background: #0074d9;
+  background: #001F3F;
   color: #fff;
   font-weight: 200;
   font-size: 13px;
@@ -832,7 +865,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AuthControl .signin-header {
-  color: #0074d9;
+  color: #001F3F;
   font-size: 25px;
   font-weight: 400;
   text-align: left;
@@ -904,7 +937,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 #AuthControl .user:hover,
 #AuthControl .pw:hover {
   background: #F0F0F0;
-  border-left: 5px solid #0074d9;
+  border-left: 5px solid #001F3F;
 }
 
 #AuthControl .acces-control input[type="text"],
@@ -942,21 +975,21 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AuthControl #loginRemember:checked ~ label[for=loginRemember] {
-  background: #0074d9;
+  background: #001F3F;
   border: 3px solid white;
-  -webkit-box-shadow: 0px 0px 0px 2px #0074d9;
-          box-shadow: 0px 0px 0px 2px #0074d9;
+  -webkit-box-shadow: 0px 0px 0px 2px #001F3F;
+          box-shadow: 0px 0px 0px 2px #001F3F;
 }
 
 #AuthControl #loginShowpass:checked ~ label[for=loginShowpass] {
-  background: #0074d9;
+  background: #001F3F;
   border: 3px solid white;
-  -webkit-box-shadow: 0px 0px 0px 2px #0074d9;
-          box-shadow: 0px 0px 0px 2px #0074d9;
+  -webkit-box-shadow: 0px 0px 0px 2px #001F3F;
+          box-shadow: 0px 0px 0px 2px #001F3F;
 }
 
 #AuthControl .acces-control input[type="submit"] {
-  background: #0074d9;
+  background: #001F3F;
   border: 0;
   height: 30px;
   border-radius: 3px;
@@ -970,7 +1003,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AuthControl .acces-control input[type="submit"]:hover {
-  background: #0074d9;
+  background: #001F3F;
 }
 
 #AuthControl .forgot {
@@ -1016,7 +1049,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AuthControl .forgot a {
-  color: #0074d9;
+  color: #001F3F;
   font-size: 17px;
 }
 
@@ -1125,7 +1158,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   color: #fff;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #0074d9;
+  border-bottom: 2px solid #001F3F;
   border-radius: 0;
   outline: none;
   -webkit-transition: border-color .2s ease-out;
@@ -1174,7 +1207,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .all-datepicker input:focus {
-  border-bottom-color: #0074d9;
+  border-bottom-color: #001F3F;
 }
 
 .all-datepicker input:focus::-webkit-input-placeholder {
@@ -1296,7 +1329,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 .datepicker.dropdown-menu table tr th.active.active:hover,
 .datepicker.dropdown-menu table tr th:active:focus,
 .datepicker.dropdown-menu table tr th.highlighted {
-  background-color: #0074d9;
+  background-color: #001F3F;
   border-color: #ededed;
 }
 
@@ -1314,7 +1347,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 .datepicker.dropdown-menu table tr th.prev,
 .datepicker.dropdown-menu table tr th.next {
   color: #ffffff;
-  background-color: #0074d9;
+  background-color: #001F3F;
   border-radius: 0;
 }
 
@@ -1455,7 +1488,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .selectholder .selectdropdown span.active {
-  background-color: #0074d9;
+  background-color: #001F3F;
   background-image: url("http://supereightstudio.com/img/radio_tick.png");
   background-repeat: no-repeat;
   background-size: 1.6em 1.6em;
@@ -1496,7 +1529,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AdminNav #adminNavLeft .admin-nav-routes ul li a:hover {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 #AdminNav #adminNavRight {
@@ -1512,7 +1545,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AdminNav #adminNavRight .admin-username ul li a {
-  background-color: #0074d9;
+  background-color: #001F3F;
   text-decoration: none;
   color: #fff;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
@@ -1526,7 +1559,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 #AdminSidebar {
   width: 15%;
   height: 100%;
-  background-color: #a0a0a0;
+  background-color: #001F3F;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
           box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
   z-index: 20;
@@ -1609,11 +1642,11 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #AdminSidebar .admin-aside-routes .accordion li.open .link {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 #AdminSidebar .admin-aside-routes .accordion li.open i {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 #AdminSidebar .admin-aside-routes .link span {
@@ -1632,7 +1665,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 #AdminSidebar .admin-aside-routes .submenu {
   display: none;
-  background: #878787;
+  background: #2C3A5A;
   font-size: 14px;
 }
 
@@ -1663,7 +1696,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-index-content-wrapper #totalUser {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .admin-index-content-wrapper #totalBookings {
@@ -1671,7 +1704,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-index-content-wrapper #totalPackages {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .admin-index-content-wrapper #totalEmployees {
@@ -1728,7 +1761,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-content-header h2 i {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .admin-content-wrapper {
@@ -1742,7 +1775,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-content-wrapper .tbl-header {
-  background-color: #0074d9;
+  background-color: #001F3F;
 }
 
 .admin-content-wrapper .tbl-content {
@@ -1805,7 +1838,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   font-size: 35px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .admin-booking-info .admin-booking-info-Cdetails ul li {
@@ -1816,7 +1849,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-booking-info .admin-booking-info-Cdetails ul li span {
-  color: #0074d9;
+  color: #001F3F;
   font-weight: 700;
   margin-right: 10px;
 }
@@ -1874,7 +1907,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-package-wrapper .admin-package .admin-package-cap .admin-package-cap-left span {
-  background: #0074d9;
+  background: #001F3F;
   padding: 4px 8px;
   color: #fff;
   border-radius: 3px 10px;
@@ -1999,7 +2032,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .admin-form-wrapper .admin-form-content .admin-form-content-bootom .btn {
-  background-color: #0074d9;
+  background-color: #001F3F;
   text-decoration: none;
   color: #fff;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
@@ -2105,7 +2138,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 .our-packages-wrapper .our-packages-header h1 {
   font-size: 25px;
   font-weight: 600;
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .our-packages-wrapper .our-packages-container {
@@ -2167,7 +2200,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   top: 10px;
   left: 10px;
   padding: 5px 15px;
-  background: #0074d9;
+  background: #001F3F;
   color: #fff;
   font-size: 14px;
   border-radius: 2px;
@@ -2202,7 +2235,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-cap .our-package-cap-left ul li i {
-  color: #0074d9;
+  color: #001F3F;
   margin-right: 6px;
 }
 
@@ -2218,12 +2251,12 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-cap .our-package-cap-right span {
-  color: #0074d9;
+  color: #001F3F;
   margin-bottom: 10px;
 }
 
 .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-cap .our-package-cap-right p {
-  color: #0074d9;
+  color: #001F3F;
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 20px;
@@ -2235,7 +2268,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   text-decoration: none;
   display: inline-block;
   margin: 5px 0;
-  background: #0074d9;
+  background: #001F3F;
   border-radius: 3px;
   font-size: 14px;
 }
@@ -2303,7 +2336,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   font-size: 16px;
   text-decoration: none;
   color: #fff;
-  background: #0074d9;
+  background: #001F3F;
   border-radius: 3px;
   display: inline-block;
   text-align: center;
@@ -2316,7 +2349,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .our-pacakge-details-wrapper .our-pacakge-details-bg-cap .our-pacakge-details-bg-cap-right .book-now-pack a:hover {
-  background: #0067cc;
+  background: #080826;
 }
 
 .our-pacakge-details-wrapper .our-pacakge-details-container {
@@ -2336,7 +2369,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .our-pacakge-details-wrapper .our-pacakge-details-container .our-pacakge-details-left .our-pacakge-details-content h3 {
-  color: #0074d9;
+  color: #001F3F;
   font-size: 23px;
 }
 
@@ -2362,7 +2395,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .our-pacakge-details-wrapper .our-pacakge-details-container .our-pacakge-details-right .our-pacakge-details-box p i {
-  color: #0074d9;
+  color: #001F3F;
   margin-right: 10px;
 }
 
@@ -2381,7 +2414,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   font-size: 16px;
   text-decoration: none;
   color: #fff;
-  background: #0074d9;
+  background: #001F3F;
   border-radius: 3px;
   display: inline-block;
   text-align: center;
@@ -2394,7 +2427,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .our-pacakge-details-wrapper .our-pacakge-details-container .our-pacakge-details-right .our-pacakge-details-booker a:hover {
-  background: #0067cc;
+  background: #080826;
 }
 
 .our-pacakge-details-wrapper .our-pacakge-details-container .our-pacakge-details-bottom {
@@ -2449,7 +2482,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .rec-package-item .package-caption-left .package-caption-rating ul li i {
-  color: #0074d9;
+  color: #001F3F;
 }
 
 .rec-package-item .package-caption-right {
@@ -2464,7 +2497,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .rec-package-item .package-caption-right .package-caption-price {
-  color: #0074d9;
+  color: #001F3F;
   font-weight: 700;
 }
 
@@ -2475,12 +2508,38 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .rec-package-item .package-day-night span {
-  background: #0074d9;
+  background: #001F3F;
   color: #fff;
   font-weight: 200;
   font-size: 13px;
   padding: 5px 10px;
   border-radius: 3px;
+}
+
+.flash-pop-message {
+  background-color: #383838;
+  width: 100%;
+  color: #fff;
+  padding: 10px 80px;
+}
+
+.flash-pop-message h2 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.flash-pop-message button {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #fff;
+  color: #636363;
+  border-radius: 2px;
+  margin: 10px 0;
 }
 
 .book-tour-form-wrapper {
@@ -2497,7 +2556,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .book-tour-form-wrapper .book-tour-form-header h2 {
-  color: #0074d9;
+  color: #001F3F;
   font-weight: 600;
   font-size: 21px;
   text-transform: uppercase;
@@ -2537,7 +2596,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .book-tour-form-wrapper .book-tour-form .form-grup .btn {
-  background-color: #0074d9;
+  background-color: #001F3F;
   text-decoration: none;
   color: #fff;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
@@ -2590,8 +2649,9 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .user-bookings-wrapper .user-bookings-container .user-bookings-header h1 {
-  color: #0074d9;
+  color: #001F3F;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .user-bookings-wrapper .user-bookings-container .user-bookings .admin-package {
@@ -2643,7 +2703,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .user-bookings-wrapper .user-bookings-container .user-bookings .admin-package .admin-package-cap .admin-package-cap-left span {
-  background: #0074d9;
+  background: #001F3F;
   padding: 4px 8px;
   color: #fff;
   border-radius: 3px 10px;
@@ -2665,11 +2725,12 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 .user-bookings-wrapper .user-bookings-container .user-bookings .user-booking-details .user-booking-details-left ul li {
   list-style: none;
-  margin-bottom: 20px;
-  font-size: 20px;
-  background: #0074d9;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
   padding: 10px;
-  color: #fff;
+  color: #001F3F;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
           box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
 }
@@ -2709,13 +2770,13 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 .user-bookings-wrapper .user-bookings-container .user-bookings .user-booking-access-info ul li strong {
   font-size: 16px;
-  color: #0074d9;
+  color: #001F3F;
   padding: 0px 20px;
   text-transform: uppercase;
 }
 
 .user-bookings-wrapper .user-bookings-container .user-bookings .user-booking-access-info a {
-  background-color: #0074d9;
+  background-color: #001F3F;
   text-decoration: none;
   color: #fff;
   -webkit-box-shadow: 0 15px 13px -8px rgba(2, 32, 50, 0.3);
@@ -2805,7 +2866,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 
 .admin-file-upload .remove-upolad-pic {
   width: 133px;
-  background-color: #0074d9;
+  background-color: #001F3F;
   padding: 10px 20px;
   border-radius: 3px;
   margin-top: 20px;
@@ -2822,7 +2883,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   position: relative;
   overflow: hidden;
   width: 133px;
-  background-color: #0074d9;
+  background-color: #001F3F;
   padding: 10px 20px;
   border-radius: 3px;
   margin-top: 20px;

@@ -42,9 +42,13 @@ Route::get('tester', function() {
 });
 
 Route::get('tester2', function() {
-  $a = Package::limit(3)->get();
-  return $a;
-  //return $a->joshbookings;
+  $a = User::findOrFail(38);
+
+  if ($a->bookingdetail === NULL) {
+    echo "null gooten";
+  }
+
+  return $a->bookingdetail;
 
 });
 
@@ -67,6 +71,8 @@ Route::group(['middleware'=>'auth'], function() {
   //User bookings
   Route::get('user/bookings', 'UserBookingController@bookings')->name('user.bookings');
   Route::get('user/bookings/{id}', 'UserBookingController@bookingInfo')->name('user.bookingInfo');
+  //Route::delete('user/booking/{id}', 'UserBookingController@delete')->name('user.userBookingDelete');
+
   Route::get('user/booking-details', 'UserBookingController@bookingDetails')->name('user.bookingDetails');
   Route::get('user/booking-details/{id}/edit', 'UserBookingController@bookingDetailsEdit')->name('user.bookingDetailsEdit');
   Route::match(['put', 'patch'],'user/booking-details-edit/{id}', 'UserBookingController@update')->name('user.bookingDetailsEditSore');

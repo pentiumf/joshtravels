@@ -21,8 +21,13 @@
 
     <nav id="HomeNav">
         <div class="navbar-top clearfix nav-pad">
-          <div class="brand">
-            <a href="#">JoshTravels</a>
+          <div class="brand clearfix">
+            <div class="company-logo">
+              <img src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502641847/joshtravel_axxiqy.jpg" alt="">
+            </div>
+            <div class="brand-name">
+              <a href="{{route('home')}}">Travels</a>
+            </div>
           </div>
           <div class="signup-control">
             @if (Auth::guest())
@@ -62,7 +67,7 @@
               </ul>
             </div>
             <div class="nav-hotline">
-              <a href="tel:+233244769950"><i class="fa fa-phone"></i> call: +233 244 769 950</a>
+              <a href="tel:+233244769950"><i class="fa fa-phone"></i>+233244769950</a>
             </div>
         </div>
       </nav>

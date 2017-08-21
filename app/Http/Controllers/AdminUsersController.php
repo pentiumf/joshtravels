@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UsersRequest;
 use App\Http\Requests\AdminUserEditRequest;
+use Illuminate\Support\Facades\Session;
 use App\User;
 use App\Role;
 
@@ -29,7 +30,8 @@ class AdminUsersController extends Controller
      */
     public function create()
     {
-      $roles = Role::pluck('name', 'id')->all();
+      //Package::limit(3)->get();
+      $roles = Role::limit(2)->pluck('name', 'id')->all();
       return view('admin.users.create', compact('roles'));
     }
 
@@ -120,6 +122,8 @@ class AdminUsersController extends Controller
       $user = User::findOrFail($id);
 
       $user->delete();
+
+      Session::flash('deleted_user', 'User deleted');
 
       return redirect('admin/user');
     }

@@ -1,6 +1,6 @@
 //This is the styles of the nav bar
 #HomeNav {
-  background-color: $brandColor;
+  background-color: #fff;
   width: 100%;
   position: fixed;
   top: 0;
@@ -14,10 +14,29 @@
 
   .navbar-top {
       .brand {
+        width: 40%;
         float: left;
+        .company-logo {
+          float: left;
+          width: 40%;
+          height: 100%;
+            img {
+              width: 100%;
+              height: 50px;
+              object-fit: cover;
+              object-position: center;
+              display: inline-block;
+              vertical-align: -8px;
+            }
+
+        }
+        .brand-name {
+          width: 30%;
+            float: left;
+        }
         a {
-          font-size: 30px;
-          color: #fff;
+          font-size: 20px;
+          color: $brandColor;
           text-decoration: none;
           font-weight: 600;
         }
@@ -27,7 +46,7 @@
         #SignIn {
           border: 2px solid #fff;
           padding: 6px 23px;
-          color: #fff;
+          color: #333;
           text-transform: uppercase;
           line-height: 50px;
           text-decoration: none;
@@ -43,12 +62,17 @@
           position: relative;
           #authName {
             text-decoration: none;
-            color: #fff;
+            color: $brandColor;
             display: block;
             padding: 11px 20px;
+            font-size: 18px;
+            font-weight: 500;
             &:hover {
-              background-color: $brandColorHover;
+              background-color: #fff;
 
+            }
+            i {
+              margin-left: 10px;
             }
           }
 
@@ -57,7 +81,7 @@
             position: absolute;
             background-color: #fff;
             right: 0;
-            box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
+            box-shadow: 0 2px 10px rgba(0,0,0,.2);
             padding: 10px 0;
             width: 200px;
             border-bottom-left-radius: 5px;
@@ -80,7 +104,7 @@
   }
 
   .navbar-bottom {
-    background-color: #fff;
+    background-color: $brandColor;
     padding-top: 10px;
     padding-bottom: 10px;
     .nav-routes {
@@ -91,13 +115,12 @@
           display: inline-block;
           a {
             text-decoration: none;
-            padding-right: 10px;
-            color: $textColor;
-            font-size: 14px;
-            font-weight: 500;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
             margin-right: 30px;
             &:hover {
-              color: $brandColor;
+              color: #fff;
             }
           }
         }
@@ -107,9 +130,10 @@
     .nav-hotline {
       float: right;
       a {
-        color: $textColor;
+        color: #fff;
         text-decoration: none;
         font-size: 15px;
+        font-weight: 600;
       }
     }
 

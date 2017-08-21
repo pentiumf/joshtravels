@@ -168,7 +168,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #HomeNav .navbar-top .signup-control #SignIn {
-  border: 2px solid #fff;
+  border: 2px solid #001F3F;
   padding: 6px 23px;
   color: #333;
   text-transform: uppercase;
@@ -181,7 +181,8 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 #HomeNav .navbar-top .signup-control #SignIn:hover {
-  border-color: rgba(255, 255, 255, 0.8);
+  background: #001F3F;
+  color: #fff;
 }
 
 #HomeNav .navbar-top .signup-control .auth-control {

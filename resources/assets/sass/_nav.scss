@@ -44,7 +44,7 @@
       .signup-control {
         float: right;
         #SignIn {
-          border: 2px solid #fff;
+          border: 2px solid #001F3F;
           padding: 6px 23px;
           color: #333;
           text-transform: uppercase;
@@ -54,7 +54,9 @@
           font-size: 13px;
           transition: 0.5s;
           &:hover {
-            border-color: rgba(255, 255, 255, 0.8);
+            background: $brandColor;
+            color: #fff;
+            //border-color: rgba(255, 255, 255, 0.8);
           }
         }
 

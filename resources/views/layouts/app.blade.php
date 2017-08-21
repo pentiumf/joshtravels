@@ -31,7 +31,7 @@
           </div>
           <div class="signup-control">
             @if (Auth::guest())
-                <a id="SignIn" href="#">Sign Up / In</a>
+                <a id="SignIn" href="javascript:void(0)">Sign Up / In</a>
             @else
                 <div class="auth-control">
                     <a id="authName" href="javascript:void(0)">
@@ -120,7 +120,7 @@
           		    to order a new password.
                   <h3>
                     Dont have an account ?
-                    <a id="Resgiter" href="#">Register Now</a>
+                    <a id="Resgiter" href="javascript:void(0)">Register Now</a>
                   </h3>
             	 </div>
 

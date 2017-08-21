@@ -17,13 +17,15 @@ $(document).ready(function() {
 
     //Login Controll
     //Sign In Button
-    $('#SignIn').on('click', function(){
-    $('.login').fadeIn();
+    $('#SignIn').on('click', function(e){
+      e.preventDefault();
+      $('.login').fadeIn();
     });
 
     //close
     $('#loginClose').on('click', function(){
-    $('.login').hide('fast');
+      //e.preventDefault();
+      $('.login').hide('fast');
     });
 
     //Show password
@@ -38,7 +40,8 @@ $(document).ready(function() {
 
 
    //Register control
-   $('#Resgiter').on('click', function() {
+   $('#Resgiter').on('click', function(e) {
+     e.preventDefault();
      $('.login').hide('fast');
      $('.signup').fadeIn();
    });

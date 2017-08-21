@@ -93,12 +93,14 @@ $(document).ready(function () {
 
   //Login Controll
   //Sign In Button
-  $('#SignIn').on('click', function () {
+  $('#SignIn').on('click', function (e) {
+    e.preventDefault();
     $('.login').fadeIn();
   });
 
   //close
   $('#loginClose').on('click', function () {
+    //e.preventDefault();
     $('.login').hide('fast');
   });
 
@@ -113,7 +115,8 @@ $(document).ready(function () {
   });
 
   //Register control
-  $('#Resgiter').on('click', function () {
+  $('#Resgiter').on('click', function (e) {
+    e.preventDefault();
     $('.login').hide('fast');
     $('.signup').fadeIn();
   });

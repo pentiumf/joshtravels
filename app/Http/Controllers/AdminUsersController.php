@@ -19,7 +19,7 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-      $users = User::all();
+      $users = User::orderBy('id', 'desc')->get();
       return view('admin.users.index', compact('users'));
     }
 
@@ -80,7 +80,7 @@ class AdminUsersController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $roles = Role::pluck('name', 'id')->all();
+        $roles = Role::limit(2)->pluck('name', 'id')->all();
 
         return view('admin.users.edit', compact('user', 'roles'));
     }
@@ -97,16 +97,29 @@ class AdminUsersController extends Controller
       $user = User::findOrFail($id);
 
       if ($request->password == '') {
-          $input = $request->except('password');
+        $input = $request->except('password');
+        $user->update($input);
+        //echo "Its empty";
       } else {
-          $input['password'] = bcrypt($request->password);
-          $input = $request->all();
+        $input = $request->all();
+        $input['password'] = bcrypt($request->password);
+        $user->update($input);
       }
 
-
-      $user->update($input);
-
       return redirect('admin/user/');
+
+      // if ($request->password == '') {
+      //     $input = $request->except('password');
+      // } else {
+      //     $input = $request->all();
+      // }
+      //$input['password'] = bcrypt($request->password);
+      //
+      // $user->update($input);
+
+      //return $request->all();
+
+      //return redirect('admin/user/');
 
       //return redirect('admin/user/'.$id);
     }

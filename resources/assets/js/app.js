@@ -348,6 +348,29 @@ $(document).ready(function() {
     });
 
 
+    $("#profileImg").change(function() {
+        var imageSize = this.files[0].size;
+        var extensions = ['png', 'jpg', 'jpeg'];
+         if ($.inArray($(this).val().split('.').pop().toLowerCase(), extensions) == -1) {
+            alert('only png and jpg is allowed');
+            this.value = '';
+            return false;
+        }
+
+        if (imageSize > 10000000) {
+            alert('image size should be less than 10mb');
+            this.value = '';
+            return false;
+        }
+
+        var image = $("#profilePreview");
+        $("#profile-edit-icon").hide()
+        image.show();
+        readImageFile(this, image);
+
+    });
+
+
 
     //Booking Flash Messsage
     $("#bookingFlas").click(function() {

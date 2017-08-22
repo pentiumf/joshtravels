@@ -18,6 +18,7 @@ use App\Customer;
 use App\Joshbooking;
 use App\Bookingdetail;
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -51,6 +52,7 @@ Route::get('tester2', function() {
   return $a->bookingdetail;
 
 });
+
 
 
 

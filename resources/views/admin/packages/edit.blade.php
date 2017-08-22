@@ -124,8 +124,22 @@
 
 				  <div class="form-grup">
 
-						{!! Form::label('photo', 'Cover Photo') !!}
-						{!! Form::file('photo', null) !!}
+						<div class="admin-file-upload">
+                  <label>Photo </label>
+                  <div class="proProfilePicWrapper">
+                      <div id="editProfileImageUploadId" class="profile-image-upload-dflt">
+                          <!-- <i id="profile-edit-icon" class="fa fa-picture-o"></i> -->
+                          <img id="profilePreview" class="proProfilePicImage" src="{{$package->photo}}"/>
+                      </div>
+                  </div>
+                  <div id="profile-pic-edit-btn" class="fileUpload">
+                      <span class="file-upload-label"> <i class="fa fa-upload" aria-hidden="true"></i>change</span>
+                      <input type="file" id="profileImg" class="upload" name="photo"/>
+                  </div>
+              </div>
+
+						<!-- {!! Form::label('photo', 'Cover Photo') !!}
+						{!! Form::file('photo', null) !!} -->
 
 					</div>
 				</div>

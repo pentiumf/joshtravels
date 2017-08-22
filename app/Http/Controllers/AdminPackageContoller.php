@@ -10,7 +10,7 @@ use App\Package;
 class AdminPackageContoller extends Controller
 {
     /**
-     * Display a listing of the resource. 
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -41,10 +41,17 @@ class AdminPackageContoller extends Controller
         $input = $request->all();
 
         if ($photoFile= $request->file('photo')) {
-            $photo = time() . $photoFile->getClientOriginalName();
 
-            $photoFile->move('images', $photo);
+            \Cloudder::upload($request->file('photo'));
 
+            $upload = \Cloudder::getResult();
+
+            $photo = $upload['secure_url'];
+
+            // $photo = time() . $photoFile->getClientOriginalName();
+            //
+            // $photoFile->move('images', $photo);
+            //
             $input['photo'] = $photo;
 
 
@@ -93,9 +100,12 @@ class AdminPackageContoller extends Controller
         $input = $request->all();
 
         if ($photoFile= $request->file('photo')) {
-            $photo = time() . $photoFile->getClientOriginalName();
 
-            $photoFile->move('images', $photo);
+            \Cloudder::upload($request->file('photo'));
+
+            $upload = \Cloudder::getResult();
+
+            $photo = $upload['secure_url'];
 
             $input['photo'] = $photo;
 

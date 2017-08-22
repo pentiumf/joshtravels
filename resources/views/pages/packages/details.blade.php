@@ -82,7 +82,7 @@
             @if($recommendedPackages)
             @foreach($recommendedPackages as $recommendedPackage)
             <div class="rec-package-item">
-                <img class="img-circle" src="http://res.cloudinary.com/hapiglsx2/image/upload/v1502613928/shutterstock_70631242_estambul_jzgori.jpg" alt="">
+                <img class="img-circle" src="{{$recommendedPackage->photo ? $recommendedPackage->photo : 'https://gitlab.kitware.com/assets/no_group_avatar-4a9d347a20d783caee8aaed4a37a65930cb8db965f61f3b72a2e954a0eaeb8ba.png'}}" alt="">
                 <div class="package-caption clearfix">
                   <div class="package-caption-left">
                     <div class="package-caption-name">

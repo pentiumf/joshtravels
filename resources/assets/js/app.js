@@ -408,7 +408,7 @@ $(document).ready(function() {
         }
 
         var image = $("#profilePreview");
-        $("#profile-edit-icon").hide()
+        $("#profile-edit-icon").hide();
         image.show();
         readImageFile(this, image);
 

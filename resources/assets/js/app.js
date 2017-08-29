@@ -7,6 +7,23 @@
 //require('./bootstrap');
 
 $(document).ready(function() {
+    // Responsive nav
+    var pull = $("#menu-bars");
+    var menu = $("#nav-routes");
+
+    $(pull).click(function(e) {
+        e.preventDefault();
+        menu.slideToggle(250);
+    })
+
+    $(window).resize(function(){
+    var w = $(window).width();
+    if(w > 320 && menu.is(':hidden')) {
+        menu.removeAttr('style');
+    }
+    });
+
+
     //Togle Auth Controll
     $("#authName").click(function(e) {
         e.preventDefault();
@@ -260,6 +277,33 @@ $(document).ready(function() {
         },
         1170: {
           items: 3
+        }
+      }
+  });
+
+  $('#about-us').owlCarousel({
+      loop: true,
+      center: true,
+      items: 1,
+      margin: 0,
+      autoplay: true,
+      dots: true,
+      nav: true,
+      navText: [
+        "<img src='https://res.cloudinary.com/hjp6lmmoa/image/upload/v1503760804/left-arrow_grqonx.png'/>",
+        "<img src='https://res.cloudinary.com/hjp6lmmoa/image/upload/v1503760804/right-arrow_ixpnkr.png'/>",
+      ],
+      autoplayTimeout: 5000,
+      smartSpeed: 450,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1170: {
+          items: 1
         }
       }
   });

@@ -54,6 +54,10 @@
           <h4><i class="fa fa-clock-o"></i> End Date</h4>
           <h5>{{$package->end_date}}</h5>
         </div>
+        <div class="admin-package-info-content">
+          <h4><i class="fa fa-circle"></i> Category</h4>
+          <h5>{{$package->category->name}}</h5>
+        </div>
       </div>
 
       <div class="admin-package-info-content-right">

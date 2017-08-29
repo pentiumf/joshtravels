@@ -33,6 +33,7 @@ class PackageCreateRequest extends FormRequest
             'depature_date' => 'required',
             'end_date' => 'required',
             'photo' => 'required',
+            'package_category_id' => 'required',
         ];
     }
 
@@ -46,6 +47,7 @@ class PackageCreateRequest extends FormRequest
           'depature_date.required' => 'Please Enter Package Depature Date',
           'end_date.required' => 'Please Enter Package End Date',
           'photo.required' => 'Please Select An Image',
+          'package_category_id.required' => 'Please Select A Category',
 
       ];
     }

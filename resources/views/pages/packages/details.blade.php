@@ -4,7 +4,7 @@
 
   <div class="our-pacakge-details-wrapper">
 
-    <div class="our-pacakge-details-bg">
+    <div class="our-pacakge-details-bg" style="background-image: url({{$package->photo}});">
       <div class="our-pacakge-details-bg-cap">
         <div class="our-pacakge-details-bg-cap-left">
           <h2>{{$package->name}}</h2>
@@ -15,13 +15,13 @@
             </div>
             <div id="packLeftLast" class="pack-left">
               <span><i class="fa fa-globe"></i></span>
-              <p>Spain Barcalos</p>
+              <p>{{$package->destination}}</p>
             </div>
           </div>
         </div>
         <div class="our-pacakge-details-bg-cap-right">
           <div class="book-now-pack">
-            <a href="{{ route('packages.book', $package->id) }}"><i class="fa fa-book"></i> Book This Tour Now</a>
+            <a href="{{ route('packages.book', $package->id) }}"><i class="fa fa-book"></i> Book This Tour</a>
           </div>
         </div>
       </div>
@@ -66,6 +66,10 @@
           <p>
             <i class="fa fa-tag"></i>
             <span>{{$package->price}}</span>
+          </p>
+          <p>
+            <i class="fa fa-circle"></i>
+            <span>{{$package->category->name}}</span>
           </p>
         </div>
         <div class="our-pacakge-details-booker">

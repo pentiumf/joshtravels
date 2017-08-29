@@ -88,6 +88,7 @@
             width: 200px;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
+            z-index: 400;
             a {
               display: block;
               padding: 5px 15px;
@@ -106,6 +107,7 @@
   }
 
   .navbar-bottom {
+    position: relative;
     background-color: $brandColor;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -141,6 +143,12 @@
 
   }
 
+}
+
+#menu-bars {
+    display: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .showAuthNav {

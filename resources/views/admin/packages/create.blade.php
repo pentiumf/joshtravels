@@ -119,6 +119,19 @@
 
 				</div>
 
+				<div class="form-grup">
+
+					{!! Form::label('package_category_id', 'Tour Category') !!}
+					{!! Form::select('package_category_id', [''=>'Choose Category'] + $packageCat, null, ['class' => 'form-control']) !!}
+
+					@if ($errors->has('package_category_id'))
+	            <span>
+	                <strong>{{ $errors->first('package_category_id') }}</strong>
+	            </span>
+	        @endif
+
+				</div>
+
 
 			  <div class="form-grup">
 
@@ -138,9 +151,6 @@
 	              <span>Remove</span>
 	          </div>
 					</div>
-
-					<!-- {!! Form::label('photo', 'Cover Photo') !!}
-					{!! Form::file('photo', null) !!} -->
 
 					@if ($errors->has('photo'))
 	            <span>
@@ -164,7 +174,6 @@
 		</div>
 	</div>
 </div>
-
 
 
 @stop

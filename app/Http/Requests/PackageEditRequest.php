@@ -32,6 +32,7 @@ class PackageEditRequest extends FormRequest
           'duration' => 'required',
           'depature_date' => 'required',
           'end_date' => 'required',
+          'package_category_id' => 'required',
         ];
     }
 
@@ -44,6 +45,8 @@ class PackageEditRequest extends FormRequest
           'description.required' => 'Please Enter Package Description',
           'depature_date.required' => 'Please Enter Package Depature Date',
           'end_date.required' => 'Please Enter Package End Date',
+          'package_category_id.required' => 'Please Select A Category',
+          
       ];
     }
 }

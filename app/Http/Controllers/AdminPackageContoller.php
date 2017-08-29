@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PackageCreateRequest;
 use App\Http\Requests\PackageEditRequest;
 use App\Package;
+use App\PackageCategory;
 
 class AdminPackageContoller extends Controller
 {
@@ -27,9 +28,9 @@ class AdminPackageContoller extends Controller
      */
     public function create()
     {
-        return view('admin.packages.create');
+        $packageCat =  PackageCategory::pluck('name', 'id')->all();
+        return view('admin.packages.create', compact('packageCat'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -83,7 +84,8 @@ class AdminPackageContoller extends Controller
     public function edit($id)
     {
         $package = Package::findOrFail($id);
-        return view('admin.packages.edit', compact('package'));
+        $packageCat =  PackageCategory::pluck('name', 'id')->all();
+        return view('admin.packages.edit', compact('package', 'packageCat'));
     }
 
     /**

@@ -57,18 +57,18 @@
         </div>
 
         <div class="navbar-bottom clearfix nav-pad">
-            <div class="nav-routes">
+          <a href="#" id="menu-bars"><i class="fa fa-bars"></i></a>
+            <div id="nav-routes" class="nav-routes">
               <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('packages')}}">Tour Package</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
               </ul>
             </div>
-            <div class="nav-hotline">
+            <!-- <div class="nav-hotline">
               <a href="tel:+233244769950"><i class="fa fa-phone"></i>+233244769950</a>
-            </div>
+            </div> -->
         </div>
       </nav>
 
@@ -197,14 +197,14 @@
                 <h3>Contact Us</h3>
                 <ul>
                   <li>132, My Street, Kingston, New York 12401</li>
-                  <li><a href="tel:+233302432124">+233-302 432124</a></li>
-                  <li><a href="tel:+233302432124">+233-302 432124</a></li>
-                  <li><a href="mailto:info@joshtravelgh.com">info@joshtravelgh.com</a></li>
+                  <li><a href="tel:+233540124713">+233 540124713</a></li>
+                  <li><a href="tel:+233302432124">+233 302432124</a></li>
+                  <li><a href="mailto:info@joshtravelsgh.com">info@joshtravelsgh.com</a></li>
                 </ul>
               </div>
 
               <div class="footer-top-float">
-                <h3>Msg For Customers</h3>
+                <h3>Message To Uor Customers</h3>
                 <p>Josh Travels and Tours Limited is
                 headed by Frank Annin- Bonsu, a seasoned private
                 practitioner in the travel and  tourism industry

@@ -17,6 +17,7 @@ use App\Packageimage;
 use App\Customer;
 use App\Joshbooking;
 use App\Bookingdetail;
+use App\PackageCategory;
 
 
 Route::get('/', function () {
@@ -42,16 +43,7 @@ Route::get('tester', function() {
 
 });
 
-Route::get('tester2', function() {
-  $a = User::findOrFail(38);
-
-  if ($a->bookingdetail === NULL) {
-    echo "null gooten";
-  }
-
-  return $a->bookingdetail;
-
-});
+//Route::get('packages/inbound', 'PackageControllar@inbound')->name('packages.inbound');
 
 
 
@@ -60,11 +52,26 @@ Route::get('tester2', function() {
 
 Route::group(['middleware'=>'web'], function() {
   //Packages
+  Route::get('packages/inbound', 'PackageControllar@inbound')->name('packages.inbound');
+  Route::get('packages/outbound', 'PackageControllar@outbound')->name('packages.outbound');
+  
+
   Route::get('packages', 'PackageControllar@index')->name('packages');
   Route::get('packages/{id}', 'PackageControllar@details')->name('packages.details');
+
+  Route::get('packages/inbound', 'PackageControllar@inbound')->name('packages.inbound');
+
   Route::get('packages/book/{id}', 'PackageControllar@book')->name('packages.book');
   Route::post('packages/book-toure', 'PackageControllar@store')->name('book.store');
   Route::post('packages/book-toure-user', 'PackageControllar@userBookStore')->name('book.storeUser');
+
+  //Portfolio
+  Route::get('portfolio', 'PortfolioController@index')->name('portfolio');
+
+  //Contat
+  Route::get('contact', 'ContatController@index')->name('contact');
+  Route::post('contact/send', 'ContatController@sendMessage')->name('sendMessage');
+
 
 });
 

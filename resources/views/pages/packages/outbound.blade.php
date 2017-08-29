@@ -28,14 +28,14 @@
 
 <div class="our-packages-wrapper">
   <div class="our-packages-header">
-    <h1>All Packages</h1>
+    <h1>Outbound Packages</h1>
   </div>
 
   <div class="our-packages-container clearfix">
     <div class="our-packages-sidebar">
       <h3>Browse Categories</h3>
       <ul>
-        <li><a href="{{route('packages')}}">All Packages</a></li>
+         <li><a href="{{route('packages')}}">All Packages</a></li>
         <li><a href="{{route('packages.outbound')}}">Out Bound Tours</a></li>
         <li><a href="{{route('packages.inbound')}}">In Bound Tours</a></li>
       </ul>

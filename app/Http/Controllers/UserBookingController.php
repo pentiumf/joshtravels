@@ -21,8 +21,13 @@ class UserBookingController extends Controller
 
       if ($userBookings->count() > 0) {
         foreach ($userBookings as $userBooking) {
-          $packages[] = Package::findOrFail($userBooking->package_id);
-
+          //try {
+            $packages[] = Package::findOrFail($userBooking->package_id);
+        //  }
+        //  catch(ModelNotFoundException $ex) {
+            //dd($ex->getMessage());
+            //echo "False";
+        //  }
         }
       }
 

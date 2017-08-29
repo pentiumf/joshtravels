@@ -1,0 +1,394 @@
+//This is the media style for phones
+@media screen and (max-width: 600px) {
+
+  //Home Nav Bar
+  .home-banner-bg .home-banner-cap {
+    padding-top: 140px;
+  }
+  .home-banner-bg .home-banner-cap h1 {
+    font-size: 30px;
+  }
+  .home-banner-bg .home-banner-cap p {
+    font-size: 14px;
+  }
+
+  .home-banner-bg .home-tab-pannel ul li {
+      height: 45px;
+      font-size: 16px;
+      width: 25%;
+  }
+
+  //responsive nav
+  #menu-bars {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+        font-size: 20px;
+        padding: 0px 12px;
+        border-radius: 2px;
+  }
+
+  #HomeNav .navbar-top .signup-control #SignIn {
+        padding: 5px 14px;
+        font-size: 12px;
+  }
+
+  #HomeNav .navbar-top .brand .company-logo {
+    width: 60%;
+  }
+
+
+  #HomeNav .nav-pad {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #HomeNav .navbar-bottom {
+    padding-bottom: 40px;
+
+  }
+
+  #AuthControl .login {
+    left: 43%;
+  }
+
+  #AuthControl .signup {
+    left: 43%;
+  }
+
+
+  #HomeNav .navbar-bottom .nav-routes {
+    float: none;
+    margin-top: 24px;
+    display: none;
+    ul {
+      li {
+        display: block;
+        a {
+          display: block;
+          padding: 8px 15px;
+          margin: 0;
+          &:hover {
+            background: #fff;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  //Finder Class
+  .finder-wrapper {
+    padding: 50px 20px 50px 20px;
+  }
+
+  .finder-wrapper .finder .find-hotel-destination {
+    float: none;
+    margin-right: 0;
+
+  }
+
+  .finder-wrapper .finder .find-hotel-group-date {
+    float: none;
+    margin-right: 0;
+
+  }
+
+  .finder-wrapper .finder .find-hotel-group-select {
+    float: none;
+    margin-right: 0;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .finder-wrapper .finder .find-hotel-group-select .selectholder {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  .finder-wrapper .finder .searchholder {
+    float: none;
+    width: 100%;
+  }
+
+  .all-datepicker .form-item {
+    width: 100%;
+    margin: 40px 24px 0 0;
+  }
+
+  .all-datepicker {
+    display: inline-block;
+  }
+
+  .finder-wrapper .finder .ofFlight .searchholder {
+    width: 100%;
+  }
+
+  .finder-wrapper .finder .ofTour .selectholder {
+    width: 100% !important;
+  }
+
+  .finder-wrapper .finder .ofTour .searchholder {
+    width: 100% !important;
+  }
+
+  //Customer Info
+  .customer-addinfo-wrapper .customer-addinfo-container .customer-addinfo .customer-addinfoicon i {
+    font-size: 25px;
+  }
+  .customer-addinfo-wrapper .customer-addinfo-container .customer-addinfo .customer-addinfocap h2 {
+    font-size: 12px;
+  }
+
+  .customer-addinfo-wrapper .customer-addinfo-container .customer-addinfo .customer-addinfocap p {
+    font-size: 11px;
+  }
+
+  //Top Destination
+  .top-destinations-wrapper .top-destinations-container {
+    margin: 0 20px;
+  }
+
+  .top-destination  {
+    width: 100%;
+    margin: 0;
+    float: none;
+    margin-bottom: 4%;
+  }
+
+
+  //Special Packages
+  .special-tourpackages-wrappers #special-packages .item {
+    height: 300px;
+  }
+
+  .special-tourpackages-wrappers .special-tourpackages-header {
+    padding: 50px 10px 10px 10px;
+  }
+
+  .special-tourpackages-wrappers .special-tourpackages-header h2 {
+    font-size: 20px;
+  }
+
+  .special-tourpackages-wrappers .special-tourpackages-header p {
+    font-size: 14px;
+  }
+
+  .special-tourpackages-wrappers #special-packages .package-caption .package-caption-left .package-caption-name h2 {
+    font-size: 13px;
+  }
+
+  .special-tourpackages-wrappers #special-packages .package-caption .package-caption-left .package-caption-rating ul li i {
+    font-size: 12px;
+  }
+
+
+  //CUTOMER INTEREST
+
+  .customer-interets-wrapper {
+    height: 200px;
+  }
+
+  .customer-interets-wrapper .customer-interets .customer-interets-left {
+    width: 30%;
+  }
+
+  .customer-interets-wrapper .customer-interets .customer-interets-right {
+    width: 70%;
+  }
+
+  .customer-interets-wrapper .customer-interets .customer-interets-left h2 {
+    font-size: 13px;
+    padding: 70% 2px 2px 2px;
+  }
+
+  .customer-interets-wrapper .customer-interets .customer-interets-right {
+    padding: 45px 10px 10px 10px;
+  }
+
+
+  .customer-interets-wrapper .customer-interets .customer-interets-right h2 {
+    font-size: 8px;
+  }
+
+  .customer-interets-wrapper .customer-interets .customer-interets-right p {
+    font-size: 6px;
+  }
+
+  //Our services
+  .our-services-wrapper .our-services .our-service {
+    float: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2%;
+  }
+
+  //Our package
+  .our-packages-wrapper .our-packages-container .our-packages-content .our-package {
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-img {
+    float: none;
+    width: 100%;
+  }
+
+  .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-cap {
+    float: none;
+    width: 100%;
+  }
+
+  .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-cap .our-package-cap-left {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .our-packages-wrapper .our-packages-container .our-packages-content .our-package .our-package-cap .our-package-cap-right {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .our-pacakge-details-wrapper .our-pacakge-details-container .our-pacakge-details-left {
+    float: none;
+    width: 100%;
+  }
+
+  .our-pacakge-details-wrapper .our-pacakge-details-container .our-pacakge-details-right {
+    float: none;
+    width: 100%;
+  }
+
+  //package Detail
+  .our-pacakge-details-wrapper .our-pacakge-details-bg {
+    height: 300px;
+  }
+  .our-pacakge-details-wrapper .our-pacakge-details-bg-cap .our-pacakge-details-bg-cap-left h2 {
+    font-size: 16px;
+  }
+
+  .our-pacakge-details-wrapper .our-pacakge-details-bg-cap .our-pacakge-details-bg-cap-right {
+    right: 0;
+  }
+
+  .our-pacakge-details-wrapper .our-pacakge-details-bg-cap .our-pacakge-details-bg-cap-right .book-now-pack a {
+    width: 160px;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .our-pacakge-details-wrapper .our-pacakge-details-bg-cap .our-pacakge-details-bg-cap-left {
+    padding: 20px;
+  }
+
+  .our-pacakge-details-wrapper .our-pacakge-details-bg-cap .our-pacakge-details-bg-cap-left .pack-left p {
+    font-size: 10px;
+  }
+
+  //Booking
+  .book-tour-form-wrapper {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px 30px;
+  }
+
+  .book-tour-form-wrapper .book-tour-form-header h2 {
+    font-size: 16px;
+  }
+
+
+  //Portfolio
+  #company-profile-wrapper {
+    margin: 15px;
+  }
+
+  #company-profile-wrapper .company-profile {
+    padding: 20px;
+  }
+
+  #about-us .item {
+    height: 400px;
+  }
+
+  #about-us .owl-dots {
+    left: 30%;
+  }
+
+  #about-us .owl-dots .owl-dot {
+    height: 3px;
+    width: 18px;
+  }
+
+  #about-us .owl-nav {
+    display: none;
+  }
+
+  #company-profile-wrapper .company-profile-header h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  //Contact us
+  #contactUsWrap .contacts-us-left {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+
+  #contactUsWrap .contacts-us-right {
+    width: 100%;
+    float: none;
+  }
+
+  #contactUsWrap .contacts-us-right .contacts-us-form .form-group input {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  #contactUsWrap .contacts-us-left .contact-left-us-social ul li a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+  }
+
+
+  //footer-top
+  footer .footer-top .footer-top-content .footer-top-float {
+    float: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2%;
+  }
+
+  footer .footer-bottom .footer-bottom-adds {
+    margin: auto 50px;
+  }
+
+  footer .footer-bottom .footer-bottom-adds #topFooterAdds .item {
+     width: 300px;
+  }
+
+
+  footer .footer-top .footer-top-content .footer-top-float ul li a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+
+
+
+
+
+
+
+
+}

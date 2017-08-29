@@ -122,6 +122,19 @@
 
 					</div>
 
+					<div class="form-grup">
+
+						{!! Form::label('package_category_id', 'Tour Category') !!}
+						{!! Form::select('package_category_id', [''=>'Choose Category'] + $packageCat, null, ['class' => 'form-control']) !!}
+
+						@if ($errors->has('package_category_id'))
+		            <span>
+		                <strong>{{ $errors->first('package_category_id') }}</strong>
+		            </span>
+		        @endif
+
+					</div>
+
 				  <div class="form-grup">
 
 						<div class="admin-file-upload">

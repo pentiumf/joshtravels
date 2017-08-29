@@ -27,6 +27,19 @@ class PackageControllar extends Controller
       return view('pages.packages.details', compact('package', 'recommendedPackages'));
     }
 
+    public function inbound() {
+      $packages = Package::orderBy('id', 'desc')->where('package_category_id', '1')->get();
+      //$packages = Package::orderBy('id', 'desc')->get();
+      //return "Nick";
+      return view('pages.packages.inbound', compact('packages'));
+    }
+
+    public function outbound() {
+      $packages = Package::orderBy('id', 'desc')->where('package_category_id', '2')->get();
+      //return "Freda";
+      return view('pages.packages.outbound', compact('packages'));
+    }
+
     public function book($id) {
       $package_id = $id;
 

@@ -357,7 +357,7 @@
 
   <div id="special-packages" class="owl-carousel">
 
-            @if($packages)
+          @if($packages)
             @foreach($packages as $package)
             <div class="item">
               <div class="shadow-effect">
@@ -435,6 +435,70 @@
 
   </div>
 
+</div>
+
+
+<div class="our-services-wrapper">
+  <div class="our-services-header">
+    <h2>Our Services</h2>
+  </div>
+
+  <div class="our-services clearfix">
+    <div class="our-service">
+      <div class="our-service-icon">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+      </div>
+      <div class="our-service-info">
+        <h3>Tour</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="our-service">
+      <div class="our-service-icon">
+        <i class="fa fa-bed" aria-hidden="true"></i>
+      </div>
+      <div class="our-service-info">
+        <h3>Hotel</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="our-service">
+      <div class="our-service-icon">
+        <i class="fa fa-plane" aria-hidden="true"></i>
+      </div>
+      <div class="our-service-info">
+        <h3>Flight</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="our-service">
+      <div class="our-service-icon">
+        <i class="fa fa-car" aria-hidden="true"></i>
+      </div>
+      <div class="our-service-info">
+        <h3>Transport</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="our-service">
+      <div class="our-service-icon">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="our-service-info">
+        <h3>Customer Care</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="our-service">
+      <div class="our-service-icon">
+        <i class="fa fa-cutlery" aria-hidden="true"></i>
+      </div>
+      <div class="our-service-info">
+        <h3>Food</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 

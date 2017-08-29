@@ -28,7 +28,7 @@
 
 <div class="our-packages-wrapper">
   <div class="our-packages-header">
-    <h1>All Packages</h1>
+    <h1>Inbound Packages</h1>
   </div>
 
   <div class="our-packages-container clearfix">

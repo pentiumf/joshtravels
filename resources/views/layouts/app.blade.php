@@ -195,7 +195,7 @@
               <div class="footer-top-float">
                 <h3>Contact Us</h3>
                 <ul>
-                  <li>132, My Street, Kingston, New York 12401</li>
+                  <li>Sika Plaza House No. 58 Paradise Children Streetwest Legon, Opposite Paradise Children Acadmey,Dome Pillar 2.</li>
                   <li><a href="tel:+233540124713">+233 540124713</a></li>
                   <li><a href="tel:+233302432124">+233 302432124</a></li>
                   <li><a href="mailto:info@joshtravelsgh.com">info@joshtravelsgh.com</a></li>
@@ -203,7 +203,7 @@
               </div>
 
               <div class="footer-top-float">
-                <h3>Message To Uor Customers</h3>
+                <h3>Message To Our Customers</h3>
                 <p>Josh Travels and Tours Limited is
                 headed by Frank Annin- Bonsu, a seasoned private
                 practitioner in the travel and  tourism industry
@@ -250,10 +250,6 @@
             </div>
           </div>
         </footer>
-
-        <!-- <p>
-
-        </p> -->
 
 
 

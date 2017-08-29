@@ -15,3 +15,4 @@ Contact No. <br>
 Thanks,<br>
 {{ $content['title'] }}
 @endcomponent
+ 

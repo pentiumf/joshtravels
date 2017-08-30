@@ -36,7 +36,7 @@
       <h3>Browse Categories</h3>
       <ul>
         <li><a href="{{route('packages')}}">All Packages</a></li>
-        <li><a href="{{route('packages.outbound')}}">Out-Bound Packeges</a></li>
+        <li><a href="{{route('packages.outbound')}}">Out-Bound Packages</a></li>
         <li><a href="{{route('packages.inbound')}}">In-Bound Packages</a></li>
       </ul>
     </div>

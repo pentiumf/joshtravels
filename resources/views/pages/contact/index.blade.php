@@ -5,9 +5,6 @@
   <div id="contact-map">
     <iframe width="100%" height="450" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDNlYCkOWpsvawAUtwrZA5tLH8G97eDkPI" allowfullscreen></iframe>
-    <!-- <iframe width="100%" height="450" frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvZ7KeWWZ3w8RL9h-7zglgpk&key=AIzaSyDNlYCkOWpsvawAUtwrZA5tLH8G97eDkPI" allowfullscreen></iframe>
-  </div> -->
 
   <div id="contactUsWrap" class="clearfix">
     <div class="contacts-us-left">
@@ -20,9 +17,9 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
           <h3>Address</h3>
           <ul>
             <li>Sika Plaza House No. 58 <br>
-               Paradise Children Streetwest Legon <br>
-               Opposite Paradise Children Acadmey <br>
-               Dome Pillar 2.</li>
+               Paradise Children Street - West Legon <br>
+               Opposite Paradise Children Academy<br>
+               Dome Pillar 2 Accra</li>
           </ul>
         </div>
       </div>

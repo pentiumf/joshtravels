@@ -6,6 +6,7 @@ use App\Events\NewBooking;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mail\BookingMade;
+use Mail;
 
 class SendBookingNotification
 {

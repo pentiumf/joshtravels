@@ -10,6 +10,10 @@ class Joshbooking extends Model
     //   return $this->belongsTo('App\Customer');
     // }
 
+    protected $events = [
+      'created' => Events\NewBooking::class
+    ];
+
     public function package() {
       return $this->belongsTo('App\Package');
     }

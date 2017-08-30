@@ -28,6 +28,7 @@ class BookingMade extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.booking.packageBooked');
+        return $this->from('info@joshtravelsltd.com', 'New Booking')
+        ->markdown('emails.booking.packageBooked');
     }
 }

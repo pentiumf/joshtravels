@@ -30,7 +30,7 @@ class ContactUsEmail extends Mailable
     {
         $ddress = $this->content['email'];
         $name = $this->content['title'];
-        return $this->from($ddress, $name) 
+        return $this->from($ddress, $name)
         ->markdown('emails.contact.message')
         ->with('content',$this->content);
 

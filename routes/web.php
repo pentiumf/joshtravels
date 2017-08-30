@@ -54,7 +54,7 @@ Route::group(['middleware'=>'web'], function() {
   //Packages
   Route::get('packages/inbound', 'PackageControllar@inbound')->name('packages.inbound');
   Route::get('packages/outbound', 'PackageControllar@outbound')->name('packages.outbound');
-  
+
 
   Route::get('packages', 'PackageControllar@index')->name('packages');
   Route::get('packages/{id}', 'PackageControllar@details')->name('packages.details');

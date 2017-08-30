@@ -7,6 +7,18 @@
 src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDNlYCkOWpsvawAUtwrZA5tLH8G97eDkPI" allowfullscreen></iframe>
 
   <div id="contactUsWrap" class="clearfix">
+
+    @if(Session::has('message_sent'))
+
+    <div class="flash-pop-message" style="margin-bottom: 40px;">
+      <h2>Hello Customer</h2>
+      <p>Your Message Has Succesfully Been Sent, We Will Get Back To You In A While. Thank You</p>
+      <button id="bookingFlas">OK</button>
+    </div>
+
+    @endif
+
+
     <div class="contacts-us-left">
       <h2>Contact Us</h2>
       <div class="contacts-us-left-info clearfix">

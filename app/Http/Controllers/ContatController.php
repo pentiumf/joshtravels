@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mail;
 use App\Mail\ContactUsEmail;
+use App\Http\Requests\ContactRequest;
+use Illuminate\Support\Facades\Session;
 
 class ContatController extends Controller
 {
@@ -12,7 +14,7 @@ class ContatController extends Controller
       return view('pages.contact.index');
     }
 
-    public function sendMessage(Request $request) {
+    public function sendMessage(ContactRequest $request) {
       $input = $request->all();
       $content = [
     		'title'=> $request['name'],
@@ -23,5 +25,10 @@ class ContatController extends Controller
       $receiverAddress = 'swaggarnick@gmail.com';
       Mail::to($receiverAddress)
       ->send(new ContactUsEmail($content));
+
+      Session::flash('message_sent', 'Message Sent');
+
+      return redirect('contact');
+
     }
-} 
+}

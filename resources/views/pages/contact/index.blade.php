@@ -19,7 +19,10 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
         <div class="contacts-us-left-cap">
           <h3>Address</h3>
           <ul>
-            <li>Sika Plaza House No. 58 Paradise Children Streetwest Legon, Opposite Paradise Children Acadmey,Dome Pillar 2</li>
+            <li>Sika Plaza House No. 58 <br>
+               Paradise Children Streetwest Legon <br>
+               Opposite Paradise Children Acadmey <br>
+               Dome Pillar 2.</li>
           </ul>
         </div>
       </div>
@@ -89,8 +92,8 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
 
     			  <div class="form-grup">
 
-    					{!! Form::label('contact', 'Contat') !!}
-    					{!! Form::text('contact', null, ['class' => 'form-control', 'placeholder'=>'Contat Number']) !!}
+    					{!! Form::label('contact', 'Contact') !!}
+    					{!! Form::text('contact', null, ['class' => 'form-control', 'placeholder'=>'Contact Number']) !!}
 
     					@if ($errors->has('contact'))
     	            <span>
@@ -103,7 +106,7 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
     			  <div class="form-grup">
 
     					{!! Form::label('message', 'Your Messsage') !!}
-    					{!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder'=>'Your Messsage']) !!}
+    					{!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder'=>'Your Message']) !!}
 
     					@if ($errors->has('message'))
     	            <span>

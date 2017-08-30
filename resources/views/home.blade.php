@@ -224,7 +224,7 @@
       </div>
       <div class="customer-addinfocap">
         <h2>3000+ Destinations</h2>
-        <p>We can take you anywhere you wanna go</p>
+        <p>We can take you anywhere you want to go</p>
       </div>
     </div>
 
@@ -352,7 +352,7 @@
 
   <div class="special-tourpackages-header">
     <h2>Special Packages</h2>
-    <p>We can take you anywhere you want to go</p>
+    <p>Below are some of our special packages can choose from.</p>
   </div>
 
   <div id="special-packages" class="owl-carousel">

@@ -195,10 +195,13 @@
               <div class="footer-top-float">
                 <h3>Contact Us</h3>
                 <ul>
-                  <li>Sika Plaza House No. 58 Paradise Children Streetwest Legon, Opposite Paradise Children Acadmey, Dome Pillar 2.</li>
+                  <li>Sika Plaza House No. 58 <br>
+                     Paradise Children Streetwest Legon <br>
+                     Opposite Paradise Children Acadmey <br>
+                     Dome Pillar 2.</li>
                   <li><a href="tel:+233540124713">+233 540124713</a></li>
                   <li><a href="tel:+233302432124">+233 302432124</a></li>
-                  <li><a href="mailto:nfo@joshtravelsltd.com">nfo@joshtravelsltd.com</a></li>
+                  <li><a href="mailto:info@joshtravelsltd.com">info@joshtravelsltd.com</a></li>
                 </ul>
               </div>
 

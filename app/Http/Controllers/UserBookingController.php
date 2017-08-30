@@ -12,6 +12,7 @@ use App\Joshbooking;
 use App\Bookingdetail;
 use App\Country;
 
+
 class UserBookingController extends Controller
 {
     //This display all user bookings

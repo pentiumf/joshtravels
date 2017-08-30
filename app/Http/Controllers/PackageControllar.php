@@ -11,7 +11,7 @@ use App\Country;
 use App\User;
 use App\Bookingdetail;
 use App\Joshbooking;
-
+use Mail;
 
 class PackageControllar extends Controller
 {

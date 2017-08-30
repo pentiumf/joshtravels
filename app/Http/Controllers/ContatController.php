@@ -24,4 +24,4 @@ class ContatController extends Controller
       Mail::to($receiverAddress)
       ->send(new ContactUsEmail($content));
     }
-}
+} 

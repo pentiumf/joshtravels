@@ -20,7 +20,6 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
           <h3>Address</h3>
           <ul>
             <li>Sika Plaza House No. 58 Paradise Children Streetwest Legon, Opposite Paradise Children Acadmey,Dome Pillar 2</li>
-            <li>P.O BOX, 123 SA</li>
           </ul>
         </div>
       </div>
@@ -29,7 +28,7 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
           <span><i class="fa fa-phone"></i></span>
         </div>
         <div class="contacts-us-left-cap">
-          <h3>Call</h3>
+          <h3>Contact Numbers</h3>
           <ul>
             <li><a href="tel:+233 540 124713">+233 540 124713</a></li>
             <li><a href="tel:+233 302 432124">+233 302 432124</a></li>
@@ -43,7 +42,7 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
         <div class="contacts-us-left-cap">
           <h3>Email</h3>
           <ul>
-            <li><a href="mailto:info@joshtravelsgh.com">info@joshtravelsgh.com</a></li>
+            <li><a href="mailto:info@joshtravelsltd.com">info@joshtravelsltd.com</a></li>
           </ul>
         </div>
       </div>

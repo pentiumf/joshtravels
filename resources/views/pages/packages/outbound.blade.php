@@ -35,9 +35,9 @@
     <div class="our-packages-sidebar">
       <h3>Browse Categories</h3>
       <ul>
-         <li><a href="{{route('packages')}}">All Packages</a></li>
-        <li><a href="{{route('packages.outbound')}}">Out Bound Tours</a></li>
-        <li><a href="{{route('packages.inbound')}}">In Bound Tours</a></li>
+        <li><a href="{{route('packages')}}">All Packages</a></li>
+        <li><a href="{{route('packages.outbound')}}">Out-Bound Packeges</a></li>
+        <li><a href="{{route('packages.inbound')}}">In-Bound Packages</a></li>
       </ul>
     </div>
 
@@ -49,7 +49,7 @@
       <div class="our-package">
         <div class="our-package-img">
           <img src="{{$package->photo ? $package->photo : 'https://gitlab.kitware.com/assets/no_group_avatar-4a9d347a20d783caee8aaed4a37a65930cb8db965f61f3b72a2e954a0eaeb8ba.png'}}" alt="">
-          <span>2 days</span>
+          <span>new</span>
         </div>
         <div class="our-package-cap clearfix">
           <div class="our-package-cap-left">
@@ -63,7 +63,8 @@
           </div>
           <div class="our-package-cap-right">
             <span><i class="fa fa-tag"></i></span>
-            <p>{{$package->price}}</p>
+            <p>{{$package->duration}}</p>
+            <!-- <p>{{$package->price}}</p> -->
             <p><a href="{{ route('packages.details', $package->id) }}">View Details</a></p>
           </div>
         </div>

@@ -352,7 +352,7 @@
 
   <div class="special-tourpackages-header">
     <h2>Special Packages</h2>
-    <p>Below are some of our special packages you choose from</p>
+    <p>We can take you anywhere you want to go</p>
   </div>
 
   <div id="special-packages" class="owl-carousel">

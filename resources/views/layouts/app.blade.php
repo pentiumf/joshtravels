@@ -60,9 +60,9 @@
             <div id="nav-routes" class="nav-routes">
               <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('packages')}}">Tour Package</a></li>
-                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li><a href="{{ route('packages')}}">Tour Packages</a></li>
+                <li><a href="{{ route('portfolio') }}">About Us</a></li>
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
               </ul>
             </div>
             <!-- <div class="nav-hotline">
@@ -195,10 +195,10 @@
               <div class="footer-top-float">
                 <h3>Contact Us</h3>
                 <ul>
-                  <li>Sika Plaza House No. 58 Paradise Children Streetwest Legon, Opposite Paradise Children Acadmey,Dome Pillar 2.</li>
+                  <li>Sika Plaza House No. 58 Paradise Children Streetwest Legon, Opposite Paradise Children Acadmey, Dome Pillar 2.</li>
                   <li><a href="tel:+233540124713">+233 540124713</a></li>
                   <li><a href="tel:+233302432124">+233 302432124</a></li>
-                  <li><a href="mailto:info@joshtravelsgh.com">info@joshtravelsgh.com</a></li>
+                  <li><a href="mailto:nfo@joshtravelsltd.com">nfo@joshtravelsltd.com</a></li>
                 </ul>
               </div>
 

@@ -49,12 +49,37 @@
 
   }
 
+
+  //Auth
+  #AuthControl .signin-header {
+    font-size: 20px;
+  }
   #AuthControl .login {
-    left: 43%;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    width: 80%;
+
   }
 
   #AuthControl .signup {
-    left: 43%;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    width: 80%;
+  }
+
+  #AuthControl .forgot h3 {
+    font-size: 12px;
+  }
+
+  #AuthControl .forgot a {
+    font-size: 14px;
+  }
+
+  #AuthControl .acces-control input[type="text"], #AuthControl input[type="password"], #AuthControl input[type="email"] {
+    padding: 15px 0px;
+    font-size: 16px;
   }
 
 
@@ -223,9 +248,22 @@
   //Our services
   .our-services-wrapper .our-services .our-service {
     float: none;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 2%;
+width: 100%;
+margin: 0;
+margin-bottom: 5%;
+border: 1px solid #eee
+  }
+
+  .our-services-wrapper .our-services .our-service .our-service-icon {
+    font-size: 40px;
+    height: 100px;
+    line-height: 100px;
+    width: 100px;
+    margin-top: 90px;
+  }
+
+  .our-services-wrapper .our-services-header h2 {
+    font-size: 24px;
   }
 
   //Our package

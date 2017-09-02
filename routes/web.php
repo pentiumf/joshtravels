@@ -68,10 +68,17 @@ Route::group(['middleware'=>'web'], function() {
   //Portfolio
   Route::get('portfolio', 'PortfolioController@index')->name('portfolio');
 
+  //Team
+  Route::get('team/{id}', 'PortfolioController@team')->name('team');
+
   //Contat
   Route::get('contact', 'ContatController@index')->name('contact');
   Route::post('contact/send', 'ContatController@sendMessage')->name('sendMessage');
 
+  //Tour Informtaion
+  Route::get('blog', 'TourInfoController@index')->name('tourInfo');
+  Route::get('blog/malaria', 'TourInfoController@malaria')->name('tourInfo.malaria');
+  Route::get('blog/items-to-bring-to-ghana', 'TourInfoController@itemsToBringToGhana')->name('tourInfo.itemsToBringToGhana');
 
 });
 
@@ -104,16 +111,14 @@ Route::group(['middleware'=>'admin'], function() {
   Route::get('admin/users/employees', 'AdminIndexController@emloyees')->name('allEmployees');
   Route::get('admin/users/subscribers', 'AdminIndexController@subscribers')->name('allSubscribers');
 
+  Route::resource('admin/staff', 'StaffController');
+
 
 });
 
 
 Route::group(['middleware'=>'employee'], function() {
 
-  Route::get('employee', function() {
-  	$user = User::findOrFail(2);
 
-  	return	$user;
-  });
 
 });

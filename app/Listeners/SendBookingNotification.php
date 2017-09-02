@@ -24,7 +24,7 @@ class SendBookingNotification
      * Handle the event.
      *
      * @param  NewBooking  $event
-     * @return void
+     * @return void 
      */
     public function handle(NewBooking $event)
     {

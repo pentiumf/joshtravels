@@ -20,7 +20,7 @@ class NewBooking
      * @return void
      */
     public function __construct()
-    {
+    { 
         //
     }
 

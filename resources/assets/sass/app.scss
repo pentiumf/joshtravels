@@ -2,6 +2,8 @@
 // Fonts
 //@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900);
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 //
 * {
   padding: 0;
@@ -122,5 +124,7 @@ footer {
 @import "fileUpload";
 @import "portfolio";
 @import "contact";
+@import "info";
+@import "team";
 @import "mediaIpad";
 @import "mediaPhone";

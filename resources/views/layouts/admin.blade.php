@@ -74,6 +74,13 @@
         			</ul>
         		</li>
             <li>
+        			<div class="link"><i class="fa fa-briefcase"></i> <span>Staffs</span>  <i class="fa fa-chevron-down"></i></div>
+        			<ul class="submenu">
+        				<li><a href="{{route('staff.index')}}">All Staffs</a></li>
+        				<li><a href="{{route('staff.create')}}">Create New Staff</a></li>
+        			</ul>
+        		</li>
+            <li>
         			<div class="link"><i class="fa fa-user"></i> <span>Admin</span> <i class="fa fa-chevron-down"></i></div>
         			<ul class="submenu">
         				<li><a href="{{route('allAdmins')}}">All Admin</a></li>

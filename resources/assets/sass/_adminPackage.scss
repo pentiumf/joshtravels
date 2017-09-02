@@ -81,6 +81,10 @@
     margin-right: 5%;
     .admin-package-info-content {
       margin-bottom: 15px;
+      h2 {
+        color: $brandColor;
+        font-size: 20px;
+      }
       h3 {
         font-size: 30px;
 
@@ -92,6 +96,9 @@
       h5 {
         font-size: 18px;
         padding: 4px 0;
+      }
+      span {
+        font-size: 19px;
       }
     }
   }

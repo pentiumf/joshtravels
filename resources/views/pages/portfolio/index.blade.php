@@ -61,4 +61,33 @@
 
     </div>
   </div>
+
+  <div class="about-us-team clearfix">
+
+    <h2>Meet The Team</h2>
+
+    @if($staffs)
+
+
+
+    <div  class="out-team-members clearfix">
+
+      @foreach($staffs as $staff)
+
+      <figure class="snip1256">
+      <img src="{{$staff->photo}}" alt="photo"/>
+      <figcaption>
+        <h3>{{$staff->name}}</h3>
+        <p>{{$staff->position}}</p><a href="{{route('team', $staff->id)}}" class="read-more">Read More</a>
+      </figcaption>
+      </figure>
+
+      @endforeach
+
+    </div>
+
+    @endif
+
+
+  </div>
 @stop

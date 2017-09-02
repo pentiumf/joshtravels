@@ -1,0 +1,81 @@
+//this is the styles of the team
+.our-team-wrapper {
+  .our-team-banner {
+    width: 100%;
+    height: 300px;
+    background: $brandColor;
+    text-align: center;
+    color: #fff;
+    position: relative;
+
+    .our-team-banner-cap {
+      padding-top: 80px;
+      h2 {
+        font-size: 50px;
+      }
+    }
+
+    .staff-profile-pic {
+      width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 125px;
+    bottom: -125px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        border: 5px solid #fff;
+      }
+    }
+  }
+
+  .out-team-members-deatils {
+    background: #eee;
+    .staff-details {
+      padding: 140px;
+      .staff-detail {
+        padding: 20px;
+        background: #fff;
+        .staff-detail-wrap {
+          padding: 10px;
+          h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            font-family: $styleFont;
+          }
+          b {
+            font-size: 20px;
+            color: $brandColor;
+            font-weight: 600;
+            margin-right: 10px;
+            i {
+              vertical-align: -2px;
+            }
+          }
+          span {
+            font-size: 17px;
+            color: #333;
+            font-weight: 600;
+          }
+        }
+        .staff-detail-exit {
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 30px;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 3px;
+            box-shadow: 0 15px 13px -8px rgba(2,32,50,.3);
+            background: $brandColor;
+          }
+        }
+      }
+    }
+  }
+}

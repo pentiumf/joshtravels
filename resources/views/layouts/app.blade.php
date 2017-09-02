@@ -63,6 +63,8 @@
                 <li><a href="{{ route('packages')}}">Tour Packages</a></li>
                 <li><a href="{{ route('portfolio') }}">About Us</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('tourInfo') }}">Blog</a></li>
+
               </ul>
             </div>
             <!-- <div class="nav-hotline">

@@ -223,7 +223,7 @@
      <div class="admin-form-content-bootom">
        <div class="form-group">
 
-         {!! Form::submit('Create Package', ['class' => 'btn']) !!}
+         {!! Form::submit('Create Staff', ['class' => 'btn']) !!}
 
        </div>
      </div>

@@ -22,7 +22,7 @@ class ContatController extends Controller
         'email' => $request['email'],
     		'contact' => $request['contact']
     	];
-      $receiverAddress = 'swaggarnick@gmail.com';
+      $receiverAddress = 'info@joshtravelsltd.com';
       Mail::to($receiverAddress)
       ->send(new ContactUsEmail($content));
 

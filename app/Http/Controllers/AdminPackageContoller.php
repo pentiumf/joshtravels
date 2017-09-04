@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PackageCreateRequest;
 use App\Http\Requests\PackageEditRequest;
+use Illuminate\Support\Facades\Session;
 use App\Package;
 use App\PackageCategory;
 
@@ -53,6 +54,9 @@ class AdminPackageContoller extends Controller
             //
             // $photoFile->move('images', $photo);
             //
+
+            Session::flash('adminPackage_created', 'Package Succesfully Created');
+
             $input['photo'] = $photo;
 
 
@@ -115,6 +119,8 @@ class AdminPackageContoller extends Controller
 
         $package->update($input);
 
+        Session::flash('adminPackage_updated', 'Package Succesfully Updated');
+
         return redirect('admin/package');
     }
 
@@ -129,6 +135,9 @@ class AdminPackageContoller extends Controller
       $package = Package::findOrFail($id);
 
       $package->delete();
+
+      Session::flash('adminPackage_deleted', 'Package Succesfully Deleted');
+
 
       return redirect('admin/package');
     }

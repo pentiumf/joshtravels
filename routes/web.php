@@ -30,16 +30,20 @@ Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::get('tester', function() {
-  $a = User::findOrFail(2);
+
+  $a = User::all();
+
+  return $a;
+
   //return $a->joshbookings;
-  $b = $a->joshbookings;
-
-  foreach ($b as $c) {
-    //echo "<pre>.$c->package_id.</pre>";
-    $packs[] = Package::findOrFail($c->package_id);
-  }
-
-  return $packs;
+  // $b = $a->joshbookings;
+  //
+  // foreach ($b as $c) {
+  //   //echo "<pre>.$c->package_id.</pre>";
+  //   $packs[] = Package::findOrFail($c->package_id);
+  // }
+  //
+  // return $packs;
 
 });
 
@@ -119,6 +123,16 @@ Route::group(['middleware'=>'admin'], function() {
 
 Route::group(['middleware'=>'employee'], function() {
 
+  Route::get('admin', 'AdminIndexController@index')->name('admin');
+
+  Route::get('admin/bookings', 'AdminBookingContoller@index')->name('bookings.index');
+  Route::get('admin/bookings/{id}', 'AdminBookingContoller@show')->name('bookings.show');
+
+  Route::resource('admin/package', 'AdminPackageContoller');
+
+  Route::get('admin/users/admins', 'AdminIndexController@admins')->name('allAdmins');
+  Route::get('admin/users/employees', 'AdminIndexController@emloyees')->name('allEmployees');
+  Route::get('admin/users/subscribers', 'AdminIndexController@subscribers')->name('allSubscribers');
 
 
 });

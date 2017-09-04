@@ -79,7 +79,7 @@ class PackageControllar extends Controller
         } else {
            return redirect('packages');
         }
-      }
+      } 
 
       elseif (Auth::guest()) {
         $guestInput = $request->except('package_id', 'user_id');

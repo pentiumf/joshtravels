@@ -9,6 +9,30 @@
   <h2>Total {{$packages->count()}}</h2>
 </div>
 
+@if(Session::has('adminPackage_created'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> Package Succesfully Created</span>
+</div>
+
+@endif
+
+@if(Session::has('adminPackage_updated'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> Package Succesfully Updated</span>
+</div>
+
+@endif
+
+@if(Session::has('adminPackage_deleted'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> Package Succesfully Deleted</span>
+</div>
+
+@endif
+
 <div class="admin-content-wrapper">
 
 

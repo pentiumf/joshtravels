@@ -6,6 +6,22 @@
   <h2><i class="fa fa-list" aria-hidden="true"></i> Staff Details</h2>
 </div>
 
+@if(Session::has('adminStaff_created'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> Staff Succesfully Created</span>
+</div>
+
+@endif
+
+@if(Session::has('adminStaff_update'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> Staff Succesfully Updated</span>
+</div>
+
+@endif
+
 <div class="admin-content-wrapper">
 
   <div class="admin-package-wrapper">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateStaffRequest;
 use App\Http\Requests\EditStaffRequest;
+use Illuminate\Support\Facades\Session;
 use App\Staff;
 
 
@@ -54,14 +55,16 @@ class StaffController extends Controller
           //
           // $photoFile->move('images', $photo);
           //
-          $input['photo'] = $photo;
 
+          $input['photo'] = $photo;
 
       }
 
       $staff = Staff::create($input);
 
       $id = $staff->id;
+
+      Session::flash('adminStaff_created', 'Staff Succesfully Created');
 
       return redirect(route('staff.show', ['id' => $id]));
 
@@ -118,6 +121,8 @@ class StaffController extends Controller
 
       $staff->update($input);
 
+      Session::flash('adminStaff_update', 'Staff Succesfully Updated');
+
       return redirect(route('staff.show', ['id' => $id]));
     }
 
@@ -132,6 +137,8 @@ class StaffController extends Controller
       $staff = Staff::findOrFail($id);
 
       $staff->delete();
+
+      Session::flash('adminStaff_delete', 'Staff Succesfully Deleted');
 
       return redirect(route('staff.index'));
     }

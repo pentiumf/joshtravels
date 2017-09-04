@@ -54,6 +54,8 @@ class AdminUsersController extends Controller
 
       User::create($input);
 
+      Session::flash('adminUser_created', 'User Succesfully Created');
+
       return redirect('admin/user');
       // return $request->all();
     }
@@ -106,6 +108,8 @@ class AdminUsersController extends Controller
         $user->update($input);
       }
 
+      Session::flash('adminUser_edited', 'User Succesfully Edited');
+
       return redirect('admin/user/');
 
       // if ($request->password == '') {
@@ -136,7 +140,8 @@ class AdminUsersController extends Controller
 
       $user->delete();
 
-      Session::flash('deleted_user', 'User deleted');
+      Session::flash('adminUser_deleted', 'User Succesfully Deleted');
+
 
       return redirect('admin/user');
     }

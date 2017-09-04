@@ -16,6 +16,7 @@
       </div>
 
 
+
       <div class="admin-live-info">
         <div class="admin-live-info-count">
           <span><i id="totalBookings" class="fa fa-book"></i> {{$totalBookings}}</span>

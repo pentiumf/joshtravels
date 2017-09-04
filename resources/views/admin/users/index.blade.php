@@ -7,6 +7,31 @@
   <h2>Total {{$users->count()}}</h2>
 </div>
 
+
+@if(Session::has('adminUser_created'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> User Succesfully Created</span>
+</div>
+    <!-- <h1>{{session('booking_made')}}</h1> -->
+@endif
+
+@if(Session::has('adminUser_edited'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> User Succesfully Updated</span>
+</div>
+    <!-- <h1>{{session('booking_made')}}</h1> -->
+@endif
+
+@if(Session::has('adminUser_deleted'))
+
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> User Succesfully Deleted</span>
+</div>
+    <!-- <h1>{{session('booking_made')}}</h1> -->
+@endif
+
 <div class="admin-content-wrapper">
   <div class="tbl-header">
         <table cellpadding="0" cellspacing="0" border="0">

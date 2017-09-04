@@ -24,6 +24,10 @@ $(document).ready(function() {
     });
 
 
+    //Auth Validation
+
+
+
     //Togle Auth Controll
     $("#authName").click(function(e) {
         e.preventDefault();
@@ -424,6 +428,59 @@ $(document).ready(function() {
     $("#already_bookedFlash").click(function() {
       $(this).parent().remove();
     });
+
+    //Hide Admin nitification
+    setTimeout(function() {
+      $('.admin-notification-panel').remove();
+    }, 2000);
+
+
+    //Loading popup
+    function updateLoadingPopup(popUpContent) {
+        popUpContent = $("#"+popUpContent);
+        var top = "150px"; //center vertical
+        var left = ($(window).width() - popUpContent.outerWidth()) / 2;  //center horizontal
+
+        popUpContent.css({
+            'top' : top,
+            'left' : left
+        })
+
+    }
+
+    function openLoadingPopup(overlayId, popUpId) {
+        $("#"+popUpId).fadeIn();
+        $("#"+overlayId).fadeIn();
+        updateLoadingPopup(popUpId);
+    }
+
+    $("#login-form").on("submit", function(e) {
+        var email = $("#email");
+        var password = $("#password");
+        if(email.val() == '' || password.val() == '') {
+            e.preventDefault();
+            alert("all fields required");
+        } else {
+            openLoadingPopup("LoginOverlay", "loginPopupWrap");
+        }
+    });
+
+    $("#register-form").on("submit", function(e) {
+        var email = $("#reg_email");
+        var password = $("#reg_password");
+        var re_password = $("#password-confirm");
+        var name = $("#username");
+
+        if(email.val() == '' || password.val() == '' || re_password.val() == '' || name.val() == '') {
+            e.preventDefault();
+            alert("all fields required");
+        }
+        else {
+          openLoadingPopup("LoginOverlay", "loginPopupWrap");
+        }
+
+    });
+
 
 
 

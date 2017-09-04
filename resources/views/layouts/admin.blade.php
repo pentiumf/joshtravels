@@ -54,12 +54,16 @@
 
         <div class="admin-aside-routes">
           <ul id="accordion" class="accordion">
+            @if(Auth::user()->role->name == "Admin")
+
             <li class="default open">
         			<div class="link"><i class="fa fa-plus"></i> <span>Add Member</span>  <i class="fa fa-chevron-down"></i></div>
         			<ul class="submenu">
         				<li><a href="{{route('user.create')}}">Create New Member</a></li>
         			</ul>
         		</li>
+
+            @endif
             <li>
         			<div class="link"><i class="fa fa-book"></i> <span>Bookings</span> <i class="fa fa-chevron-down"></i></div>
         			<ul class="submenu">
@@ -73,19 +77,24 @@
         				<li><a href="{{route('package.create')}}">Create New Package</a></li>
         			</ul>
         		</li>
-            <li>
-        			<div class="link"><i class="fa fa-briefcase"></i> <span>Staffs</span>  <i class="fa fa-chevron-down"></i></div>
-        			<ul class="submenu">
-        				<li><a href="{{route('staff.index')}}">All Staffs</a></li>
-        				<li><a href="{{route('staff.create')}}">Create New Staff</a></li>
-        			</ul>
-        		</li>
+
+            @if(Auth::user()->role->name == "Admin")
+              <li>
+                <div class="link"><i class="fa fa-briefcase"></i> <span>Staffs</span>  <i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                  <li><a href="{{route('staff.index')}}">All Staffs</a></li>
+                  <li><a href="{{route('staff.create')}}">Create New Staff</a></li>
+                </ul>
+              </li>
+            @endif
+
             <li>
         			<div class="link"><i class="fa fa-user"></i> <span>Admin</span> <i class="fa fa-chevron-down"></i></div>
         			<ul class="submenu">
         				<li><a href="{{route('allAdmins')}}">All Admin</a></li>
         			</ul>
         		</li>
+
             <li>
         			<div class="link"><i class="fa fa-user"></i> <span>Employees</span> <i class="fa fa-chevron-down"></i></div>
         			<ul class="submenu">

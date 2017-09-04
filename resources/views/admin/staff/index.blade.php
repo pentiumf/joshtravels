@@ -9,8 +9,15 @@
   <h2>Total {{$staffs->count()}}</h2>
 </div>
 
-<div class="admin-content-wrapper">
+@if(Session::has('adminStaff_delete'))
 
+<div class="admin-notification-panel animated shake">
+  <span><i class="fa fa-bell" aria-hidden="true"></i> Staff Succesfully Deleted</span>
+</div>
+
+@endif
+
+<div class="admin-content-wrapper">
 
   <div class="admin-package-wrapper clearfix">
     @if ($staffs)

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +16,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
     <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    <style media="screen">
+    .over-lay-bg-valiadte {
+        display: none;
+        background-color: rgba(0,0,0,0.6);
+        height: 100%;
+        left: 0;
+        margin: auto;
+        opacity: 0.6;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100001;
+      }
+
+      .loader {
+          width: 1em;
+          height: 1em;
+          font-size: 100px;
+          position: fixed;
+          z-index: 4000000;
+          display: none;
+        }
+
+        @media (max-width: 225px), (max-height: 225px) {
+          .loader {
+            font-size: 75px;
+          }
+        }
+        .loader:before, .loader:after {
+          content: "";
+          top: 0;
+          display: block;
+          width: 1em;
+          height: 1em;
+          position: absolute;
+          border-width: 0.5em;
+          border-style: double;
+          border-color: transparent;
+          box-sizing: border-box;
+          border-radius: 1em;
+          -webkit-animation: spin 1s infinite;
+          animation: spin 1s infinite;
+        }
+        .loader:after {
+          left: 0;
+          border-left-color: #fff;
+        }
+        .loader:before {
+          right: 0;
+          border-right-color: #fff;
+          -webkit-animation-delay: -0.25s;
+          animation-delay: -0.25s;
+        }
+
+        @-webkit-keyframes spin {
+          from {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes spin {
+          from {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+
+
+
+
+    </style>
+
 </head>
 <body>
+
+
+  <!-- <div id="loginPopupWrap" class="loadingPopUp">
+     <div class='loadingPopupIcon'></div>
+      <p>Authenticating...</p>
+  </div> -->
+
+  <div id="loginPopupWrap" class='loader'></div>
 
 
     <nav id="HomeNav">
@@ -76,7 +163,7 @@
     <div id="AuthControl">
 
       <div class='login acces-control'>
-      	  <form class="" method="POST" action="{{ route('login') }}">
+      	  <form id="login-form" class="" method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
               <span class='close' id='loginClose'><i class="fa fa-times" aria-hidden="true"></i></span>
           		 <div class='top'>
@@ -128,8 +215,7 @@
       	  </form>
       </div>
         <div class='signup acces-control'>
-
-        	  <form class="" method="POST" action="{{ route('register') }}">
+        	  <form id="register-form" class="" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
                 <span class='close' id='signupClose'><i class="fa fa-times" aria-hidden="true"></i></span>
 
@@ -138,7 +224,7 @@
             		 </div>
 
                  <div class='user'>
-            		    <input id="name" name='name' placeholder='Name' type='text' value="{{ old('name') }}" required autofocus>
+            		    <input id="username" name='name' placeholder='Name' type='text' value="{{ old('name') }}" required autofocus>
                     @if ($errors->has('name'))
                         <span class="auth-error">
                             <strong>{{ $errors->first('name') }}</strong>
@@ -147,7 +233,7 @@
             		 </div>
 
             		 <div class='user'>
-            		    <input id="email" name='email' placeholder='E-mail' type='email' value="{{ old('email') }}" required>
+            		    <input id="reg_email" name='email' placeholder='E-mail' type='email' value="{{ old('email') }}" required>
                     @if ($errors->has('email'))
                         <span class="auth-error">
                             <strong>{{ $errors->first('email') }}</strong>
@@ -156,7 +242,7 @@
             		 </div>
 
             		 <div class='pw'>
-            		    <input id='password' name='password' placeholder='Password' type='password' required>
+            		    <input id='reg_password' name='password' placeholder='Password' type='password' required>
                     @if ($errors->has('password'))
                         <span class="auth-error">
                             <strong>{{ $errors->first('password') }}</strong>
@@ -258,6 +344,7 @@
 
 
 
+    <div id="LoginOverlay" class="over-lay-bg-valiadte"></div>
     <!-- Scripts -->
     <script src="{{ asset('js/libs.js') }}"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js'></script>

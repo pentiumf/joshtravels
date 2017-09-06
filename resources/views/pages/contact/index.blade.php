@@ -22,7 +22,7 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
 
     <div class="flash-pop-message" style="margin-bottom: 40px;">
       <h2>Hello Customer</h2>
-      <p>Your Failed To Send. Please Try Again.</p>
+      <p>Failed To Send Message. Please Try Again.</p>
       <button id="bookingFlas">OK</button>
     </div>
 

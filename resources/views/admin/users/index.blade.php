@@ -55,8 +55,8 @@
             <tbody>
               @foreach ($users as $user)
                 <tr>
-                    <td class="cap">{{$user->name}}</td>
-                    <td class="cap">{{$user->email}}</td>
+                    <td class="cap">{{str_limit($user->name, 18)}}</td>
+                    <td class="cap">{{str_limit($user->email, 18)}}</td>
                     <td class="cap">{{$user->is_active == 1 ? 'Active' : 'Not Active'}}</td>
                     <td id="" class="duration">{{$user->role_id == NULL ? 'No Role' : $user->role->name}}</td>
                     <td class="cap">{{$user->created_at->diffForHumans()}}</td>

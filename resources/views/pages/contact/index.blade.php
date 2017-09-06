@@ -18,6 +18,16 @@ src="https://www.google.com/maps/embed/v1/place?q=Dome%20Pillar%202&key=AIzaSyDN
 
     @endif
 
+    @if(Session::has('message_not'))
+
+    <div class="flash-pop-message" style="margin-bottom: 40px;">
+      <h2>Hello Customer</h2>
+      <p>Your Failed To Send. Please Try Again.</p>
+      <button id="bookingFlas">OK</button>
+    </div>
+
+    @endif
+
 
     <div class="contacts-us-left">
 

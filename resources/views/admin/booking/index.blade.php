@@ -28,7 +28,7 @@
             <tbody>
               @foreach ($bookings as $booking)
                 <tr>
-                    <td class="cap">{{$booking->package->name}}</td>
+                    <td class="cap">{{str_limit($booking->package->name, 20)}}</td>
                     <td class="cap">{{$booking->created_at->diffForHumans()}}</td>
                     <td class="cap">New</td>
                     <td class="center"><a href="{{route('bookings.show',  $booking->id)}}" class="homeUpdateBtn">View Details</a></td></tr>

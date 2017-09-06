@@ -30,8 +30,8 @@
             <tbody>
               @foreach ($admins as $admin)
                 <tr>
-                    <td class="cap">{{$admin->name}}</td>
-                    <td class="cap">{{$admin->email}}</td>
+                    <td class="cap">{{str_limit($admin->name, 18)}}</td>
+                    <td class="cap">{{str_limit($admin->email, 18)}}</td>
                     <td class="cap">{{$admin->is_active == 1 ? 'Active' : 'Not Active'}}</td>
                     <td class="duration">{{$admin->role_id == NULL ? 'No Role' : $admin->role->name}}</td>
                     <td class="cap">{{$admin->created_at->diffForHumans()}}</td>

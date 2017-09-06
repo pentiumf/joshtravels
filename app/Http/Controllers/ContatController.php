@@ -7,6 +7,7 @@ use Mail;
 use App\Mail\ContactUsEmail;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Session;
+use App\Exceptions\Handler;
 
 class ContatController extends Controller
 {
@@ -22,11 +23,20 @@ class ContatController extends Controller
         'email' => $request['email'],
     		'contact' => $request['contact']
     	];
+      //$receiverAddress = 'swaggarnick@gmail.com';
       $receiverAddress = 'info@joshtravelsltd.com';
-      Mail::to($receiverAddress)
-      ->send(new ContactUsEmail($content));
 
-      Session::flash('message_sent', 'Message Sent');
+      try {
+
+        Mail::to($receiverAddress)
+        ->send(new ContactUsEmail($content));
+        Session::flash('message_sent', 'Message Sent');
+
+      } catch(\Exception $e){
+
+        Session::flash('message_not', 'Message Not Sent');
+
+      }
 
       return redirect('contact');
 

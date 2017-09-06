@@ -7,6 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mail\BookingMade;
 use Mail;
+use App\Exceptions\Handler;
 
 class SendBookingNotification
 {
@@ -28,8 +29,16 @@ class SendBookingNotification
      */
     public function handle(NewBooking $event)
     {
-      $receiverAddress = 'info@joshtravelsltd.com';
-      Mail::to($receiverAddress)
-      ->send(new BookingMade);
+      try {
+
+        $receiverAddress = 'info@joshtravelsltd.com';
+        Mail::to($receiverAddress)
+        ->send(new BookingMade);
+
+      } catch (\Exception $e) {
+        //error occured
+      }
+
+
     }
 }

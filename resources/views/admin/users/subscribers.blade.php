@@ -30,8 +30,8 @@
             <tbody>
               @foreach ($subscribers as $subscriber)
                 <tr>
-                    <td class="cap">{{$subscriber->name}}</td>
-                    <td class="cap">{{$subscriber->email}}</td>
+                    <td class="cap">{{str_limit($subscriber->name, 18)}}</td>
+                    <td class="cap">{{str_limit($subscriber->email, 18)}}</td>
                     <td class="cap">{{$subscriber->is_active == 1 ? 'Active' : 'Not Active'}}</td>
                     <td class="duration">{{$subscriber->role_id == NULL ? 'No Role' : $subscriber->role->name}}</td>
                     <td class="cap">{{$subscriber->created_at->diffForHumans()}}</td>

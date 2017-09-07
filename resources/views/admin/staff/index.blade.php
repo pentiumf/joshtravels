@@ -25,7 +25,7 @@
 
     <div class="admin-package">
       <div class="admin-package-image">
-        <img src="{{$staff->photo ? $staff->photo : 'https://gitlab.kitware.com/assets/no_group_avatar-4a9d347a20d783caee8aaed4a37a65930cb8db965f61f3b72a2e954a0eaeb8ba.png'}}" alt="">
+        <img src="/storage/staff/{{$staff->photo ? $staff->photo : 'https://gitlab.kitware.com/assets/no_group_avatar-4a9d347a20d783caee8aaed4a37a65930cb8db965f61f3b72a2e954a0eaeb8ba.png'}}" alt="">
       </div>
       <div class="admin-package-cap">
         <div class="admin-package-cap-left">

@@ -43,22 +43,32 @@ class StaffController extends Controller
 
       $input = $request->all();
 
-      if ($photoFile= $request->file('photo')) {
+      if ($request->hasFile('photo')) {
 
-          \Cloudder::upload($request->file('photo'));
+        $filename = time(). $request->photo->getClientOriginalName();
+        $filesize = $request->photo->getClientSize();
+        $path = $request->photo->storeAs('public/staff', $filename);
 
-          $upload = \Cloudder::getResult();
-
-          $photo = $upload['secure_url'];
-
-          // $photo = time() . $photoFile->getClientOriginalName();
-          //
-          // $photoFile->move('images', $photo);
-          //
-
-          $input['photo'] = $photo;
-
+        $input['photo'] = $filename;
+        //return $filename;
       }
+
+      // if ($photoFile= $request->file('photo')) {
+      //
+      //     \Cloudder::upload($request->file('photo'));
+      //
+      //     $upload = \Cloudder::getResult();
+      //
+      //     $photo = $upload['secure_url'];
+      //
+      //     // $photo = time() . $photoFile->getClientOriginalName();
+      //     //
+      //     // $photoFile->move('images', $photo);
+      //     //
+      //
+      //     $input['photo'] = $photo;
+      //
+      // }
 
       $staff = Staff::create($input);
 
@@ -107,17 +117,27 @@ class StaffController extends Controller
 
       $input = $request->all();
 
-      if ($photoFile= $request->file('photo')) {
+      if ($request->hasFile('photo')) {
 
-          \Cloudder::upload($request->file('photo'));
+        $filename = time(). $request->photo->getClientOriginalName();
+        $filesize = $request->photo->getClientSize();
+        $path = $request->photo->storeAs('public/staff', $filename);
 
-          $upload = \Cloudder::getResult();
-
-          $photo = $upload['secure_url'];
-
-          $input['photo'] = $photo;
-
+        $input['photo'] = $filename;
+        //return $filename;
       }
+
+      // if ($photoFile= $request->file('photo')) {
+      //
+      //     \Cloudder::upload($request->file('photo'));
+      //
+      //     $upload = \Cloudder::getResult();
+      //
+      //     $photo = $upload['secure_url'];
+      //
+      //     $input['photo'] = $photo;
+      //
+      // }
 
       $staff->update($input);
 

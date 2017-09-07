@@ -10,7 +10,7 @@
       </div>
 
       <div class="staff-profile-pic animated swing">
-        <img src="{{$staff->photo}}" alt="">
+        <img src="/storage/staff/{{$staff->photo}}" alt="">
       </div>
     </div>
 

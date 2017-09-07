@@ -4,7 +4,7 @@
 
   <div class="our-pacakge-details-wrapper">
 
-    <div class="our-pacakge-details-bg" style="background-image: url({{$package->photo}});">
+    <div class="our-pacakge-details-bg" style="background-image: url(/storage/packages/{{$package->photo}});">
       <div class="our-pacakge-details-bg-cap">
         <div class="our-pacakge-details-bg-cap-left">
           <h2>{{$package->name}}</h2>

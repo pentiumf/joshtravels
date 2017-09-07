@@ -8,6 +8,7 @@ use App\Http\Requests\PackageEditRequest;
 use Illuminate\Support\Facades\Session;
 use App\Package;
 use App\PackageCategory;
+use Illuminate\Support\Facades\Storage;
 
 class AdminPackageContoller extends Controller
 {
@@ -42,26 +43,36 @@ class AdminPackageContoller extends Controller
     {
         $input = $request->all();
 
-        if ($photoFile= $request->file('photo')) {
+        if ($request->hasFile('photo')) {
 
-            \Cloudder::upload($request->file('photo'));
+          $filename = time(). $request->photo->getClientOriginalName();
+          $filesize = $request->photo->getClientSize();
+          $path = $request->photo->storeAs('public/packages', $filename);
 
-            $upload = \Cloudder::getResult();
-
-            $photo = $upload['secure_url'];
-
-            // $photo = time() . $photoFile->getClientOriginalName();
-            //
-            // $photoFile->move('images', $photo);
-            //
-
-            Session::flash('adminPackage_created', 'Package Succesfully Created');
-
-            $input['photo'] = $photo;
-
-
+          $input['photo'] = $filename;
+          //return $filename;
         }
+        //PackageCreateRequest
 
+        // if ($photoFile= $request->file('photo')) {
+        //
+        //     \Cloudder::upload($request->file('photo'));
+        //
+        //     $upload = \Cloudder::getResult();
+        //
+        //     $photo = $upload['secure_url'];
+        //
+        //     // $photo = time() . $photoFile->getClientOriginalName();
+        //     //
+        //     // $photoFile->move('images', $photo);
+        //     //
+        //
+        Session::flash('adminPackage_created', 'Package Succesfully Created');
+        //
+        //     $input['photo'] = $photo;
+        //
+        //
+        // }
         Package::create($input);
 
         return redirect('admin/package');

@@ -116,17 +116,27 @@ class AdminPackageContoller extends Controller
 
         $input = $request->all();
 
-        if ($photoFile= $request->file('photo')) {
+        if ($request->hasFile('photo')) {
 
-            \Cloudder::upload($request->file('photo'));
+          $filename = time(). $request->photo->getClientOriginalName();
+          $filesize = $request->photo->getClientSize();
+          $path = $request->photo->storeAs('public/packages', $filename);
 
-            $upload = \Cloudder::getResult();
-
-            $photo = $upload['secure_url'];
-
-            $input['photo'] = $photo;
-
+          $input['photo'] = $filename;
+          //return $filename;
         }
+
+        // if ($photoFile= $request->file('photo')) {
+        //
+        //     \Cloudder::upload($request->file('photo'));
+        //
+        //     $upload = \Cloudder::getResult();
+        //
+        //     $photo = $upload['secure_url'];
+        //
+        //     $input['photo'] = $photo;
+        //
+        // }
 
         $package->update($input);
 

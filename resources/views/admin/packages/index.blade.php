@@ -35,7 +35,6 @@
 
 <div class="admin-content-wrapper">
 
-
   <div class="admin-package-wrapper clearfix">
     @if ($packages)
     @foreach ($packages as $package)

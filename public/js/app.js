@@ -1,1 +1,533 @@
-!function(e){function t(a){if(i[a])return i[a].exports;var n=i[a]={i:a,l:!1,exports:{}};return e[a].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var i={};t.m=e,t.c=i,t.d=function(e,i,a){t.o(e,i)||Object.defineProperty(e,i,{configurable:!1,enumerable:!0,get:a})},t.n=function(e){var i=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(i,"a",i),i},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=0)}([function(e,t,i){i(1),e.exports=i(2)},function(e,t){$(document).ready(function(){function e(e,t){if(e.files&&e.files[0]){var i=new FileReader;i.onload=function(e){$(t).attr("src",e.target.result)},i.readAsDataURL(e.files[0])}}function t(e){e=$("#"+e);var t=($(window).width()-e.outerWidth())/2;e.css({top:"150px",left:t})}function i(e,i){$("#"+i).fadeIn(),$("#"+e).fadeIn(),t(i)}var a=$("#menu-bars"),n=$("#nav-routes");$(a).click(function(e){e.preventDefault(),n.slideToggle(250)}),$(window).resize(function(){$(window).width()>320&&n.is(":hidden")&&n.removeAttr("style")}),$("#authName").click(function(e){e.preventDefault(),$("#authDropDown").toggleClass("showAuthNav")}),$("#SignIn").on("click",function(e){e.preventDefault(),$(".login").fadeIn()}),$("#loginClose").on("click",function(){$(".login").hide("fast")}),$("#loginShowpass").change(function(){var e=document.getElementById("password");!0===this.checked?e.type="text":e.type="password"}),$("#Resgiter").on("click",function(e){e.preventDefault(),$(".login").hide("fast"),$(".signup").fadeIn()}),$("#signupClose").on("click",function(){$(".signup").hide("fast")}),$("#LoginDirect").on("click",function(){$(".signup").hide("fast"),$(".login").fadeIn()}),$(".home-tab-pannel ul li").click(function(){var e=$(this).attr("data-find");$(".finder").removeClass("current-finder"),$(".home-tab-pannel ul li.current-flight-tab").removeClass("current-flight-tab"),$(this).addClass("current-flight-tab"),$("#"+e).addClass("current-finder")});var o=$("#hotel-datepicker"),r=$("#hotel-start-date"),s=$("#hotel-end-date"),l=$("#hotel-date-depart"),d=$("#hotel-date-return");o.datepicker({autoclose:!0,format:"mm/dd",maxViewMode:0,startDate:"now"}).on("change",function(){var e=$.format.date(r.datepicker("getDate"),"ddd, MMMM D yyyy"),t=$.format.date(s.datepicker("getDate"),"ddd, MMMM D yyyy");l.text(e),d.text(t)});var c=$("#flight-datepicker"),p=$("#flight-start-date"),h=$("#flight-end-date"),u=$("#flight-date-depart"),f=$("#flight-date-return");c.datepicker({autoclose:!0,format:"mm/dd",maxViewMode:0,startDate:"now"}).on("change",function(){var e=$.format.date(p.datepicker("getDate"),"ddd, MMMM D yyyy"),t=$.format.date(h.datepicker("getDate"),"ddd, MMMM D yyyy");u.text(e),f.text(t)});var m=$("#tour-datepicker"),v=$("#tour-start-date"),g=$("#tour-end-date"),w=$("#tour-date-depart"),y=$("#tour-date-return");m.datepicker({autoclose:!0,format:"mm/dd",maxViewMode:0,startDate:"now"}).on("change",function(){var e=$.format.date(v.datepicker("getDate"),"ddd, MMMM D yyyy"),t=$.format.date(g.datepicker("getDate"),"ddd, MMMM D yyyy");w.text(e),y.text(t)}),$(".selectholder").each(function(){$(this).children().hide();var e=$(this).children("label").text();$(this).append('<span class="desc">'+e+"</span>"),$(this).append('<span class="pulldown"></span>'),$(this).append('<div class="selectdropdown"></div>'),$(this).children("select").children("option").each(function(){if("0"!=$(this).attr("value")){$drop=$(this).parent().siblings(".selectdropdown");var e=$(this).attr("value");$drop.append("<span>"+e+"</span>")}}),$(this).click(function(){$(this).hasClass("activeselectholder")?($(this).children(".selectdropdown").slideUp(200),$(this).removeClass("activeselectholder"),"0"!=$(this).children("select").val()&&$(this).children(".desc").fadeOut(100,function(){$(this).text($(this).siblings("select").val()),$(this).fadeIn(100)})):($(".activeselectholder").each(function(){$(this).children(".selectdropdown").slideUp(200),"0"!=$(this).children("select").val()&&$(this).children(".desc").fadeOut(100,function(){$(this).text($(this).siblings("select").val()),$(this).fadeIn(100)}),$(this).removeClass("activeselectholder")}),$(this).children(".selectdropdown").slideDown(200),$(this).addClass("activeselectholder"),"0"!=$(this).children("select").val()&&$(this).children(".desc").fadeOut(100,function(){$(this).text($(this).siblings("select").children("option[value=0]").text()),$(this).fadeIn(100)}))})}),$(".selectholder .selectdropdown span").click(function(){$(this).siblings().removeClass("active"),$(this).addClass("active");var e=$(this).text();$(this).parent().siblings("select").val(e),$(this).parent().siblings(".desc").fadeOut(100,function(){$(this).text(e),$(this).fadeIn(100)})}),$("#special-packages").owlCarousel({loop:!0,center:!0,items:3,margin:0,autoplay:!0,dots:!1,nav:!0,navText:["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],autoplayTimeout:8500,smartSpeed:450,responsive:{0:{items:1},768:{items:2},1170:{items:3}}}),$("#topFooterAdds").owlCarousel({loop:!0,center:!0,items:5,margin:0,autoplay:!0,dots:!1,nav:!1,autoplayTimeout:8500,smartSpeed:450,responsive:{0:{items:1},768:{items:2},1170:{items:3}}}),$("#about-us").owlCarousel({loop:!0,center:!0,items:1,margin:0,autoplay:!0,dots:!0,nav:!0,navText:["<img src='https://res.cloudinary.com/hjp6lmmoa/image/upload/v1503760804/left-arrow_grqonx.png'/>","<img src='https://res.cloudinary.com/hjp6lmmoa/image/upload/v1503760804/right-arrow_ixpnkr.png'/>"],autoplayTimeout:5e3,smartSpeed:450,responsive:{0:{items:1},768:{items:1},1170:{items:1}}}),$(function(){var e=function(e,t){this.el=e||{},this.multiple=t||!1,this.el.find(".link").on("click",{el:this.el,multiple:this.multiple},this.dropdown)};e.prototype.dropdown=function(e){var t=e.data.el;$this=$(this),$next=$this.next(),$next.slideToggle(),$this.parent().toggleClass("open"),e.data.multiple||t.find(".submenu").not($next).slideUp().parent().removeClass("open")};new e($("#accordion"),!1)}),$("#createProfileImageUploadId").click(function(){$("#createProfileImg").trigger("click")}),$("#createProfileImg").change(function(){var t=this.files[0].size,i=["png","jpg","jpeg"];if(-1==$.inArray($(this).val().split(".").pop().toLowerCase(),i))return alert("only png and jpg is allowed"),this.value="",!1;if(t>1e7)return alert("image size should be less than 10mb"),this.value="",!1;var a=$("#CreateProfilePreview");$("#profile-upload-icon").hide(),a.show(),e(this,a),$("#profile-pic-upload-btn").hide(),$("#remove-profile-pic").show()}),$("#remove-profile-pic").click(function(){$("#CreateProfilePreview").attr("src",""),$("#createProfileImg").val(""),$("#CreateProfilePreview").hide(),$("#profile-upload-icon").show(),$(this).hide(),$("#profile-pic-upload-btn").show()}),$("#profileImg").change(function(){var t=this.files[0].size,i=["png","jpg","jpeg"];if(-1==$.inArray($(this).val().split(".").pop().toLowerCase(),i))return alert("only png and jpg is allowed"),this.value="",!1;if(t>1e7)return alert("image size should be less than 10mb"),this.value="",!1;var a=$("#profilePreview");$("#profile-edit-icon").hide(),a.show(),e(this,a)}),$("#bookingFlas").click(function(){$(this).parent().remove()}),$("#already_bookedFlash").click(function(){$(this).parent().remove()}),setTimeout(function(){$(".admin-notification-panel").remove()},2e3),$("#login-form").on("submit",function(e){var t=$("#email"),a=$("#password");""==t.val()||""==a.val()?(e.preventDefault(),alert("all fields required")):i("LoginOverlay","loginPopupWrap")}),$("#register-form").on("submit",function(e){var t=$("#reg_email"),a=$("#reg_password"),n=$("#password-confirm"),o=$("#username");""==t.val()||""==a.val()||""==n.val()||""==o.val()?(e.preventDefault(),alert("all fields required")):i("LoginOverlay","loginPopupWrap")})})},function(e,t){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+//require('./bootstrap');
+
+$(document).ready(function () {
+  // Responsive nav
+  var pull = $("#menu-bars");
+  var menu = $("#nav-routes");
+
+  $(pull).click(function (e) {
+    e.preventDefault();
+    menu.slideToggle(250);
+  });
+
+  $(window).resize(function () {
+    var w = $(window).width();
+    if (w > 320 && menu.is(':hidden')) {
+      menu.removeAttr('style');
+    }
+  });
+
+  //Auth Validation
+
+
+  //Togle Auth Controll
+  $("#authName").click(function (e) {
+    e.preventDefault();
+    //$(this).toggleClass("addBgToAuthPull");
+    $("#authDropDown").toggleClass("showAuthNav");
+  });
+
+  //Login Controll
+  //Sign In Button
+  $('#SignIn').on('click', function (e) {
+    e.preventDefault();
+    $('.login').fadeIn();
+  });
+
+  //close
+  $('#loginClose').on('click', function () {
+    //e.preventDefault();
+    $('.login').hide('fast');
+  });
+
+  //Show password
+  $("#loginShowpass").change(function () {
+    var pas = document.getElementById('password');
+    if (this.checked === true) {
+      pas.type = "text";
+    } else {
+      pas.type = "password";
+    }
+  });
+
+  //Register control
+  $('#Resgiter').on('click', function (e) {
+    e.preventDefault();
+    $('.login').hide('fast');
+    $('.signup').fadeIn();
+  });
+
+  $('#signupClose').on('click', function () {
+    $('.signup').hide('fast');
+  });
+
+  $('#LoginDirect').on('click', function () {
+    $('.signup').hide('fast');
+    $('.login').fadeIn();
+  });
+
+  //Home Tab Pannel
+  $(".home-tab-pannel ul li").click(function () {
+    var tab_id = $(this).attr('data-find');
+
+    $('.finder').removeClass('current-finder');
+    $(".home-tab-pannel ul li.current-flight-tab").removeClass("current-flight-tab");
+
+    $(this).addClass('current-flight-tab');
+    $("#" + tab_id).addClass('current-finder');
+  });
+
+  //Hotel Date Picker
+  var dateSelect = $('#hotel-datepicker');
+  var dateDepart = $('#hotel-start-date');
+  var dateReturn = $('#hotel-end-date');
+  var spanDepart = $('#hotel-date-depart');
+  var spanReturn = $('#hotel-date-return');
+  var spanDateFormat = 'ddd, MMMM D yyyy';
+
+  dateSelect.datepicker({
+    autoclose: true,
+    format: "mm/dd",
+    maxViewMode: 0,
+    startDate: "now"
+  }).on('change', function () {
+    var start = $.format.date(dateDepart.datepicker('getDate'), spanDateFormat);
+    var end = $.format.date(dateReturn.datepicker('getDate'), spanDateFormat);
+    spanDepart.text(start);
+    spanReturn.text(end);
+  });
+
+  //Flight Date Picker
+  var fligtSelect = $('#flight-datepicker');
+  var fligtDepart = $('#flight-start-date');
+  var flightReturn = $('#flight-end-date');
+  var flightSpanDepart = $('#flight-date-depart');
+  var flightSpanReturn = $('#flight-date-return');
+  var flightDateFormat = 'ddd, MMMM D yyyy';
+
+  fligtSelect.datepicker({
+    autoclose: true,
+    format: "mm/dd",
+    maxViewMode: 0,
+    startDate: "now"
+  }).on('change', function () {
+    var start = $.format.date(fligtDepart.datepicker('getDate'), flightDateFormat);
+    var end = $.format.date(flightReturn.datepicker('getDate'), flightDateFormat);
+    flightSpanDepart.text(start);
+    flightSpanReturn.text(end);
+  });
+
+  //Tour Date Picker
+  var tourSelect = $('#tour-datepicker');
+  var tourDepart = $('#tour-start-date');
+  var tourReturn = $('#tour-end-date');
+  var tourSpanDepart = $('#tour-date-depart');
+  var tourSpanReturn = $('#tour-date-return');
+  var tourDateFormat = 'ddd, MMMM D yyyy';
+
+  tourSelect.datepicker({
+    autoclose: true,
+    format: "mm/dd",
+    maxViewMode: 0,
+    startDate: "now"
+  }).on('change', function () {
+    var start = $.format.date(tourDepart.datepicker('getDate'), tourDateFormat);
+    var end = $.format.date(tourReturn.datepicker('getDate'), tourDateFormat);
+    tourSpanDepart.text(start);
+    tourSpanReturn.text(end);
+  });
+
+  //Custom Select
+  $('.selectholder').each(function () {
+    $(this).children().hide();
+    var description = $(this).children('label').text();
+    $(this).append('<span class="desc">' + description + '</span>');
+    $(this).append('<span class="pulldown"></span>');
+    // set up dropdown element
+    $(this).append('<div class="selectdropdown"></div>');
+    $(this).children('select').children('option').each(function () {
+      if ($(this).attr('value') != '0') {
+        $drop = $(this).parent().siblings('.selectdropdown');
+        var name = $(this).attr('value');
+        $drop.append('<span>' + name + '</span>');
+      }
+    });
+    // on click, show dropdown
+    $(this).click(function () {
+      if ($(this).hasClass('activeselectholder')) {
+        // roll up roll up
+        $(this).children('.selectdropdown').slideUp(200);
+        $(this).removeClass('activeselectholder');
+        // change span back to selected option text
+        if ($(this).children('select').val() != '0') {
+          $(this).children('.desc').fadeOut(100, function () {
+            $(this).text($(this).siblings("select").val());
+            $(this).fadeIn(100);
+          });
+        }
+      } else {
+        // if there are any other open dropdowns, close 'em
+        $('.activeselectholder').each(function () {
+          $(this).children('.selectdropdown').slideUp(200);
+          // change span back to selected option text
+          if ($(this).children('select').val() != '0') {
+            $(this).children('.desc').fadeOut(100, function () {
+              $(this).text($(this).siblings("select").val());
+              $(this).fadeIn(100);
+            });
+          }
+          $(this).removeClass('activeselectholder');
+        });
+        // roll down
+        $(this).children('.selectdropdown').slideDown(200);
+        $(this).addClass('activeselectholder');
+        // change span to show select box title while open
+        if ($(this).children('select').val() != '0') {
+          $(this).children('.desc').fadeOut(100, function () {
+            $(this).text($(this).siblings("select").children("option[value=0]").text());
+            $(this).fadeIn(100);
+          });
+        }
+      }
+    });
+  });
+  // select dropdown click action
+  $('.selectholder .selectdropdown span').click(function () {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    var value = $(this).text();
+    $(this).parent().siblings('select').val(value);
+    $(this).parent().siblings('.desc').fadeOut(100, function () {
+      $(this).text(value);
+      $(this).fadeIn(100);
+    });
+  });
+
+  //Josn P
+  //
+  // var url = "https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=AU50zk0wtkVg9WsUAwAjeIASrGJTjUZi&origin=NYC&departure_date=2017-08-16&one-way=false&duration=1--15&direct=false&max_price=";
+  // $.ajax({
+  //   dataType: "json",
+  //   url: url,
+  //   success: function(data) {
+  //     console.log(data);
+  //   }
+  // });
+
+  $('#special-packages').owlCarousel({
+    loop: true,
+    center: true,
+    items: 3,
+    margin: 0,
+    autoplay: true,
+    dots: false,
+    nav: true,
+    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    autoplayTimeout: 8500,
+    smartSpeed: 450,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1170: {
+        items: 3
+      }
+    }
+  });
+
+  $('#topFooterAdds').owlCarousel({
+    loop: true,
+    center: true,
+    items: 5,
+    margin: 0,
+    autoplay: true,
+    dots: false,
+    nav: false,
+    autoplayTimeout: 8500,
+    smartSpeed: 450,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1170: {
+        items: 3
+      }
+    }
+  });
+
+  $('#about-us').owlCarousel({
+    loop: true,
+    center: true,
+    items: 1,
+    margin: 0,
+    autoplay: true,
+    dots: true,
+    nav: true,
+    navText: ["<img src='https://res.cloudinary.com/hjp6lmmoa/image/upload/v1503760804/left-arrow_grqonx.png'/>", "<img src='https://res.cloudinary.com/hjp6lmmoa/image/upload/v1503760804/right-arrow_ixpnkr.png'/>"],
+    autoplayTimeout: 5000,
+    smartSpeed: 450,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      1170: {
+        items: 1
+      }
+    }
+  });
+
+  //This is the admin accordion script
+  $(function () {
+    var Accordion = function Accordion(el, multiple) {
+      this.el = el || {};
+      this.multiple = multiple || false;
+
+      // Variables privadas
+      var links = this.el.find('.link');
+      // Evento
+      links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+    };
+
+    Accordion.prototype.dropdown = function (e) {
+      var $el = e.data.el;
+      $this = $(this), $next = $this.next();
+
+      $next.slideToggle();
+      $this.parent().toggleClass('open');
+
+      if (!e.data.multiple) {
+        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+      };
+    };
+
+    var accordion = new Accordion($('#accordion'), false);
+  });
+
+  //Image upload
+
+  function readImageFile(file, img) {
+
+    if (file.files && file.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $(img).attr('src', e.target.result);
+      };
+      reader.readAsDataURL(file.files[0]);
+    }
+  }
+
+  $("#createProfileImageUploadId").click(function () {
+    $("#createProfileImg").trigger('click');
+  });
+
+  $("#createProfileImg").change(function () {
+    var imageSize = this.files[0].size;
+    var extensions = ['png', 'jpg', 'jpeg'];
+    if ($.inArray($(this).val().split('.').pop().toLowerCase(), extensions) == -1) {
+      alert('only png and jpg is allowed');
+      this.value = '';
+      return false;
+    }
+
+    if (imageSize > 10000000) {
+      alert('image size should be less than 10mb');
+      this.value = '';
+      return false;
+    }
+
+    var image = $("#CreateProfilePreview");
+    $("#profile-upload-icon").hide();
+    image.show();
+    readImageFile(this, image);
+    $("#profile-pic-upload-btn").hide();
+    $("#remove-profile-pic").show();
+  });
+
+  $("#remove-profile-pic").click(function () {
+    $("#CreateProfilePreview").attr('src', '');
+    $("#createProfileImg").val('');
+    $("#CreateProfilePreview").hide();
+    $("#profile-upload-icon").show();
+    $(this).hide();
+    $("#profile-pic-upload-btn").show();
+  });
+
+  $("#profileImg").change(function () {
+    var imageSize = this.files[0].size;
+    var extensions = ['png', 'jpg', 'jpeg'];
+    if ($.inArray($(this).val().split('.').pop().toLowerCase(), extensions) == -1) {
+      alert('only png and jpg is allowed');
+      this.value = '';
+      return false;
+    }
+
+    if (imageSize > 10000000) {
+      alert('image size should be less than 10mb');
+      this.value = '';
+      return false;
+    }
+
+    var image = $("#profilePreview");
+    $("#profile-edit-icon").hide();
+    image.show();
+    readImageFile(this, image);
+  });
+
+  //Booking Flash Messsage
+  $("#bookingFlas").click(function () {
+    $(this).parent().remove();
+  });
+
+  $("#already_bookedFlash").click(function () {
+    $(this).parent().remove();
+  });
+
+  //Hide Admin nitification
+  setTimeout(function () {
+    $('.admin-notification-panel').remove();
+  }, 2000);
+
+  //Loading popup
+  function updateLoadingPopup(popUpContent) {
+    popUpContent = $("#" + popUpContent);
+    var top = "150px"; //center vertical
+    var left = ($(window).width() - popUpContent.outerWidth()) / 2; //center horizontal
+
+    popUpContent.css({
+      'top': top,
+      'left': left
+    });
+  }
+
+  function openLoadingPopup(overlayId, popUpId) {
+    $("#" + popUpId).fadeIn();
+    $("#" + overlayId).fadeIn();
+    updateLoadingPopup(popUpId);
+  }
+
+  $("#login-form").on("submit", function (e) {
+    var email = $("#email");
+    var password = $("#password");
+    if (email.val() == '' || password.val() == '') {
+      e.preventDefault();
+      alert("all fields required");
+    } else {
+      openLoadingPopup("LoginOverlay", "loginPopupWrap");
+    }
+  });
+
+  $("#register-form").on("submit", function (e) {
+    var email = $("#reg_email");
+    var password = $("#reg_password");
+    var re_password = $("#password-confirm");
+    var name = $("#username");
+
+    if (email.val() == '' || password.val() == '' || re_password.val() == '' || name.val() == '') {
+      e.preventDefault();
+      alert("all fields required");
+    } else {
+      openLoadingPopup("LoginOverlay", "loginPopupWrap");
+    }
+  });
+});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+/******/ ]);

@@ -450,7 +450,7 @@
       </div>
       <div class="our-service-info">
         <h3>Tour</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Experience the best of tourism in Ghana, West Africa and beyond with JOSH travels.  Our Expert team will take you on a guided tour to visit the best & serene locations for your viewing pleasure. </p>
       </div>
     </div>
     <div class="our-service">
@@ -459,7 +459,7 @@
       </div>
       <div class="our-service-info">
         <h3>Hotel</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Enjoy accommodation with our partner luxury hotels. Wide arrays of 2 to 5 star hotels are available for you to choose from.</p>
       </div>
     </div>
     <div class="our-service">
@@ -468,7 +468,7 @@
       </div>
       <div class="our-service-info">
         <h3>Flight</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>We offer the best ticket deals available on the market.  Our competitive advantage over the period has been our flexible payment options for our cherished clients.</p>
       </div>
     </div>
     <div class="our-service">
@@ -477,7 +477,7 @@
       </div>
       <div class="our-service-info">
         <h3>Transport</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Commuting in the foreign land can be hectic, especially without guidance. JOSH Travels has various travel means for you to choose from.</p>
       </div>
     </div>
     <div class="our-service">
@@ -486,7 +486,7 @@
       </div>
       <div class="our-service-info">
         <h3>Customer Care</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>For Businesses and Enterprises out there, we are your Biggest Clients’ favorite customer service provider. We provide optimum customer service to all; one way or the other.</p>
       </div>
     </div>
     <div class="our-service">
@@ -495,7 +495,7 @@
       </div>
       <div class="our-service-info">
         <h3>Food</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>A travel experience can never be complete without good food. We ensure that you try out the best local cuisines available or peculiar to the location of our tourists. </p>
       </div>
     </div>
   </div>

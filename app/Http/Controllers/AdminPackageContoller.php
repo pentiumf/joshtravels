@@ -45,9 +45,13 @@ class AdminPackageContoller extends Controller
 
         if ($request->hasFile('photo')) {
 
+          $file = $request->file('photo');
+
           $filename = time(). $request->photo->getClientOriginalName();
           $filesize = $request->photo->getClientSize();
-          $path = $request->photo->storeAs('public/packages', $filename);
+          //$path = $request->photo->storeAs('public/packages', $filename);
+
+          $file->move('images', $filename);
 
           $input['photo'] = $filename;
           //return $filename;
@@ -118,11 +122,21 @@ class AdminPackageContoller extends Controller
 
         if ($request->hasFile('photo')) {
 
+          $file = $request->file('photo');
+
           $filename = time(). $request->photo->getClientOriginalName();
           $filesize = $request->photo->getClientSize();
-          $path = $request->photo->storeAs('public/packages', $filename);
+          //$path = $request->photo->storeAs('public/packages', $filename);
+
+          $file->move('images', $filename);
 
           $input['photo'] = $filename;
+
+          // $filename = time(). $request->photo->getClientOriginalName();
+          // $filesize = $request->photo->getClientSize();
+          // $path = $request->photo->storeAs('public/packages', $filename);
+
+          //$input['photo'] = $filename;
           //return $filename;
         }
 

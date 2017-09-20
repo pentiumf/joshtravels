@@ -197,7 +197,7 @@
                <div class="proProfilePicWrapper">
                    <div id="editProfileImageUploadId" class="profile-image-upload-dflt">
                        <!-- <i id="profile-edit-icon" class="fa fa-picture-o"></i> -->
-                       <img id="profilePreview" class="proProfilePicImage" src="/storage/staff/{{$staff->photo}}"/>
+                       <img id="profilePreview" class="proProfilePicImage" src="/images/{{$staff->photo}}"/>
                    </div>
                </div>
                <div id="profile-pic-edit-btn" class="fileUpload">

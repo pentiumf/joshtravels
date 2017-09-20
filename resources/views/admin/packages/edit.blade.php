@@ -142,7 +142,7 @@
                   <div class="proProfilePicWrapper">
                       <div id="editProfileImageUploadId" class="profile-image-upload-dflt">
                           <!-- <i id="profile-edit-icon" class="fa fa-picture-o"></i> -->
-                          <img id="profilePreview" class="proProfilePicImage" src="/storage/packages/{{$package->photo}}"/>
+                          <img id="profilePreview" class="proProfilePicImage" src="/images/{{$package->photo}}"/>
                       </div>
                   </div>
                   <div id="profile-pic-edit-btn" class="fileUpload">

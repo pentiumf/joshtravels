@@ -75,7 +75,7 @@
       @foreach($staffs as $staff)
 
       <figure class="snip1256">
-      <img src="/storage/staff/{{$staff->photo}}" alt="photo"/>
+      <img src="/images/{{$staff->photo}}" alt="photo"/>
       <figcaption>
         <h3>{{$staff->name}}</h3>
         <p>{{$staff->position}}</p><a href="{{route('team', $staff->id)}}" class="read-more">Read More</a>

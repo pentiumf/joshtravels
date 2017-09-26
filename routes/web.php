@@ -84,6 +84,9 @@ Route::group(['middleware'=>'web'], function() {
   Route::get('blog/malaria', 'TourInfoController@malaria')->name('tourInfo.malaria');
   Route::get('blog/items-to-bring-to-ghana', 'TourInfoController@itemsToBringToGhana')->name('tourInfo.itemsToBringToGhana');
 
+  //Book
+  Route::get('book', 'PackageControllar@amadeusBook')->name('amadeusBook');
+
 });
 
 Route::group(['middleware'=>'auth'], function() {

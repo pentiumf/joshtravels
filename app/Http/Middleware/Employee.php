@@ -23,6 +23,6 @@ class Employee
           }
       }
 
-      return redirect('/');
+      return redirect('/login');
     }
 }

@@ -79,7 +79,7 @@ class PackageControllar extends Controller
         } else {
            return redirect('packages');
         }
-      } 
+      }
 
       elseif (Auth::guest()) {
         $guestInput = $request->except('package_id', 'user_id');
@@ -137,6 +137,11 @@ class PackageControllar extends Controller
         return redirect('packages');
       }
 
+    }
+
+
+    public function amadeusBook() {
+      return view('pages.book.book');
     }
 
 }

@@ -148,6 +148,7 @@
               <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('packages')}}">Tour Packages</a></li>
+                <li><a href="{{ route('amadeusBook')}}">Book</a></li>
                 <li><a href="{{ route('portfolio') }}">About Us</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
                 <li><a href="{{ route('tourInfo') }}">Blog</a></li>

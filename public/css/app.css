@@ -294,6 +294,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 }
 
 .home-banner-bg .home-banner-cap {
+  display: none;
   padding-top: 200px;
   text-align: center;
   color: #fff;
@@ -317,6 +318,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   width: 100%;
   bottom: 0;
   text-align: center;
+  display: none;
 }
 
 .home-banner-bg .home-tab-pannel ul {
@@ -356,6 +358,7 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
   padding: 50px 20px 100px 20px;
   border-bottom: 1px solid #333;
   background-color: #4F4F4F;
+  display: none;
 }
 
 .finder-wrapper .current-finder {
@@ -3702,8 +3705,8 @@ footer .footer-bottom .footer-bottom-adds #footerSocial ul li a {
 #bookFrame {
   width: 80%;
   margin: 0 auto;
-  height: 100vh;
-  padding: 50px 0;
+  height: 100%;
+  padding: 20px 0;
 }
 
 #bookFrame iframe {

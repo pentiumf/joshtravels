@@ -3,18 +3,24 @@
 @section('content')
 
 <div class="home-banner-bg">
+  <div id="bookFrame">
+    <iframe src="https://www.epower.amadeus.com/josh" width="" height=""></iframe>
+  </div>
+
   <div class="home-banner-cap">
     <h1>Tour With Josh Travel</h1>
     <p>Visit Europe, America, Asia, Africa or beyond!</p>
   </div>
 
   <div class="home-tab-pannel">
+
     <ul class="clearfix">
       <li class="find-tab current-flight-tab" data-find="find-1"> <img src="http://res.cloudinary.com/hvwqgvdi9/image/upload/v1502377271/hotel_fscxg3.png">Hotel</li>
       <li class="find-tab" data-find="find-2"><img src="http://res.cloudinary.com/hvwqgvdi9/image/upload/v1502377271/plane_a4cysr.png">Flight</li>
       <li class="find-tab" data-find="find-3"><img src="http://res.cloudinary.com/hvwqgvdi9/image/upload/v1502377271/earth-pictures_na3dqc.png">Tour</li>
     </ul>
   </div>
+
 </div>
 
 <div class="finder-wrapper">

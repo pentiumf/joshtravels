@@ -85,7 +85,7 @@ Route::group(['middleware'=>'web'], function() {
   Route::get('blog/items-to-bring-to-ghana', 'TourInfoController@itemsToBringToGhana')->name('tourInfo.itemsToBringToGhana');
 
   //Book
-  Route::get('book', 'PackageControllar@amadeusBook')->name('amadeusBook');
+  //Route::get('book', 'PackageControllar@amadeusBook')->name('amadeusBook');
 
 });
 

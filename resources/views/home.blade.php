@@ -4,7 +4,7 @@
 
 <div class="home-banner-bg">
   <div id="bookFrame">
-    <iframe src="https://www.epower.amadeus.com/josh" width="" height=""></iframe>
+    <iframe id="iFrame" src="https://www.epower.amadeus.com/josh" width="" height=""></iframe>
   </div>
 
   <div class="home-banner-cap">

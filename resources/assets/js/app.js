@@ -7,6 +7,16 @@
 //require('./bootstrap');
 
 $(document).ready(function() {
+
+  //   //var c = $("#bookFrame iframe").contents().find("#ShellPanel");
+  //   var c = $("#iFrame").contents().find("#fullback").html();
+  //
+  //   $('#iFrame').load(function(){
+  //       $('#iFrame').contents().find('body').html('Hey, i`ve changed content of <body>! Yay!!!');
+  //   });
+  //
+  // //  console.log(c);
+
     // Responsive nav
     var pull = $("#menu-bars");
     var menu = $("#nav-routes");
